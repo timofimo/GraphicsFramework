@@ -1,0 +1,65 @@
+\hypertarget{_i_context_state_functions_8h}{}\section{D\+:/\+Programming/\+Graphics\+Framework/\+Graphics\+Framework/\+Include/\+Interfaces/\+I\+Context\+State\+Functions.h File Reference}
+\label{_i_context_state_functions_8h}\index{D\+:/\+Programming/\+Graphics\+Framework/\+Graphics\+Framework/\+Include/\+Interfaces/\+I\+Context\+State\+Functions.\+h@{D\+:/\+Programming/\+Graphics\+Framework/\+Graphics\+Framework/\+Include/\+Interfaces/\+I\+Context\+State\+Functions.\+h}}
+{\ttfamily \#include \char`\"{}Math.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_g_f_w_1_1_i_context_state_functions}{G\+F\+W\+::\+I\+Context\+State\+Functions}
+\begin{DoxyCompactList}\small\item\em Interface for methods that change the state of the context. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespace_g_f_w}{G\+FW}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespace_g_f_w_a9e0ba6f593449f3060559ead1bc7e92f}{G\+F\+W\+::\+Rasterization\+Mode} \{ \hyperlink{namespace_g_f_w_a9e0ba6f593449f3060559ead1bc7e92fae8225b11842409df543692aebed34fd1}{G\+F\+W\+::\+Rasterization\+Mode\+::\+F\+I\+LL}, 
+\hyperlink{namespace_g_f_w_a9e0ba6f593449f3060559ead1bc7e92fa17b8ef2c330f1430e00c9de5469fc7e7}{G\+F\+W\+::\+Rasterization\+Mode\+::\+L\+I\+NE}, 
+\hyperlink{namespace_g_f_w_a9e0ba6f593449f3060559ead1bc7e92fa70b71cabeeaf8c2bf473c896d5442ddb}{G\+F\+W\+::\+Rasterization\+Mode\+::\+P\+O\+I\+N\+TS}
+ \}\begin{DoxyCompactList}\small\item\em Enum with all rasterization modes. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespace_g_f_w_a393ef12f1927ff3e7b73b11f72d551eb}{G\+F\+W\+::\+Face\+Direction} \{ \hyperlink{namespace_g_f_w_a393ef12f1927ff3e7b73b11f72d551ebabb2fe5c916efb43aab8cbb68f997d2ee}{G\+F\+W\+::\+Face\+Direction\+::\+F\+R\+O\+NT}, 
+\hyperlink{namespace_g_f_w_a393ef12f1927ff3e7b73b11f72d551eba1dd26f1f1790f0b56d5752fb0fbecef0}{G\+F\+W\+::\+Face\+Direction\+::\+B\+A\+CK}, 
+\hyperlink{namespace_g_f_w_a393ef12f1927ff3e7b73b11f72d551ebaca0e438cddda63061a0149241dc23ad1}{G\+F\+W\+::\+Face\+Direction\+::\+F\+R\+O\+N\+T\+\_\+\+A\+N\+D\+\_\+\+B\+A\+CK}
+ \}\begin{DoxyCompactList}\small\item\em Enum with all possible face directions during rasterization. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespace_g_f_w_a2eabb5a646179bceaab2d5e3bfce2316}{G\+F\+W\+::\+Test\+Function} \{ \newline
+\hyperlink{namespace_g_f_w_a2eabb5a646179bceaab2d5e3bfce2316a443475558f0168dff92ecde26b98ae5a}{G\+F\+W\+::\+Test\+Function\+::\+N\+E\+V\+ER}, 
+\hyperlink{namespace_g_f_w_a2eabb5a646179bceaab2d5e3bfce2316af3fc827ade4b968e50406496907ef962}{G\+F\+W\+::\+Test\+Function\+::\+A\+L\+W\+A\+YS}, 
+\hyperlink{namespace_g_f_w_a2eabb5a646179bceaab2d5e3bfce2316a1798e8c3621ca53d9e3a80d257306000}{G\+F\+W\+::\+Test\+Function\+::\+L\+E\+SS}, 
+\hyperlink{namespace_g_f_w_a2eabb5a646179bceaab2d5e3bfce2316a8a72211a539c4f44dcaa446209076da6}{G\+F\+W\+::\+Test\+Function\+::\+L\+E\+Q\+U\+AL}, 
+\newline
+\hyperlink{namespace_g_f_w_a2eabb5a646179bceaab2d5e3bfce2316ae7e72355289e404b762d4cf88824d23b}{G\+F\+W\+::\+Test\+Function\+::\+G\+R\+E\+A\+T\+ER}, 
+\hyperlink{namespace_g_f_w_a2eabb5a646179bceaab2d5e3bfce2316a9e63a520a6e8fefd37a5fa966d96f3bc}{G\+F\+W\+::\+Test\+Function\+::\+G\+E\+Q\+U\+AL}, 
+\hyperlink{namespace_g_f_w_a2eabb5a646179bceaab2d5e3bfce2316a969f331a87d8c958473c32b4d0e61a44}{G\+F\+W\+::\+Test\+Function\+::\+E\+Q\+U\+AL}, 
+\hyperlink{namespace_g_f_w_a2eabb5a646179bceaab2d5e3bfce2316a94fbd04a26dff1689ee02634be6aaf1f}{G\+F\+W\+::\+Test\+Function\+::\+N\+O\+T\+E\+Q\+U\+AL}
+ \}\begin{DoxyCompactList}\small\item\em Enum with comparative functions common to graphics A\+P\+Is. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespace_g_f_w_a6a4cd1647d3100386320b711cdda20d4}{G\+F\+W\+::\+Test\+Operation} \{ \newline
+\hyperlink{namespace_g_f_w_a6a4cd1647d3100386320b711cdda20d4a60cba2874369bd3790e14ea5f8a7bc58}{G\+F\+W\+::\+Test\+Operation\+::\+K\+E\+EP}, 
+\hyperlink{namespace_g_f_w_a6a4cd1647d3100386320b711cdda20d4a529e9e0beb5f85d1f132917c1a09860c}{G\+F\+W\+::\+Test\+Operation\+::\+Z\+E\+RO}, 
+\hyperlink{namespace_g_f_w_a6a4cd1647d3100386320b711cdda20d4a90cf1f5206b348a822cc1a453a587534}{G\+F\+W\+::\+Test\+Operation\+::\+I\+N\+C\+R\+E\+M\+E\+NT}, 
+\hyperlink{namespace_g_f_w_a6a4cd1647d3100386320b711cdda20d4ac0ffa6e46086551bc5113d1238faf106}{G\+F\+W\+::\+Test\+Operation\+::\+D\+E\+C\+R\+E\+M\+E\+NT}, 
+\newline
+\hyperlink{namespace_g_f_w_a6a4cd1647d3100386320b711cdda20d4aa2727ae72447eea06d4cc0ef67187280}{G\+F\+W\+::\+Test\+Operation\+::\+I\+N\+V\+E\+RT}, 
+\hyperlink{namespace_g_f_w_a6a4cd1647d3100386320b711cdda20d4a560a2dd6f6744646473b3b19e1fe96d7}{G\+F\+W\+::\+Test\+Operation\+::\+R\+E\+P\+L\+A\+CE}, 
+\hyperlink{namespace_g_f_w_a6a4cd1647d3100386320b711cdda20d4aeace79f724efc6745ae635ad36ed3016}{G\+F\+W\+::\+Test\+Operation\+::\+I\+N\+C\+R\+E\+M\+E\+N\+T\+\_\+\+W\+R\+AP}, 
+\hyperlink{namespace_g_f_w_a6a4cd1647d3100386320b711cdda20d4a967efcfc9743940e5aed7802e13b9108}{G\+F\+W\+::\+Test\+Operation\+::\+D\+E\+C\+R\+E\+M\+E\+N\+T\+\_\+\+W\+R\+AP}
+ \}\begin{DoxyCompactList}\small\item\em Enum with operations to perform when a test passed. Common to most graphics A\+P\+Is. \end{DoxyCompactList}
+\item 
+enum \hyperlink{namespace_g_f_w_ac19434e926d01e02140f07e74ff36f3c}{G\+F\+W\+::\+Blend\+Function} \{ \newline
+\hyperlink{namespace_g_f_w_ac19434e926d01e02140f07e74ff36f3ca529e9e0beb5f85d1f132917c1a09860c}{G\+F\+W\+::\+Blend\+Function\+::\+Z\+E\+RO}, 
+\hyperlink{namespace_g_f_w_ac19434e926d01e02140f07e74ff36f3cabc21e6484530fc9d0313cb816b733396}{G\+F\+W\+::\+Blend\+Function\+::\+O\+NE}, 
+\hyperlink{namespace_g_f_w_ac19434e926d01e02140f07e74ff36f3ca0d64e73cd04f53e815a849347285839e}{G\+F\+W\+::\+Blend\+Function\+::\+S\+R\+C\+\_\+\+C\+O\+L\+OR}, 
+\hyperlink{namespace_g_f_w_ac19434e926d01e02140f07e74ff36f3ca7b6800b175a83b53ee1c1a0e7a4beae3}{G\+F\+W\+::\+Blend\+Function\+::\+O\+N\+E\+\_\+\+M\+I\+N\+\_\+\+S\+R\+C\+\_\+\+C\+O\+L\+OR}, 
+\newline
+\hyperlink{namespace_g_f_w_ac19434e926d01e02140f07e74ff36f3ca220e8b21c17d3d0f297244647d60df59}{G\+F\+W\+::\+Blend\+Function\+::\+D\+S\+T\+\_\+\+C\+O\+L\+OR}, 
+\hyperlink{namespace_g_f_w_ac19434e926d01e02140f07e74ff36f3cad4d92f5c84984342634260a4b5fd393b}{G\+F\+W\+::\+Blend\+Function\+::\+O\+N\+E\+\_\+\+M\+I\+N\+\_\+\+D\+S\+T\+\_\+\+C\+O\+L\+OR}, 
+\hyperlink{namespace_g_f_w_ac19434e926d01e02140f07e74ff36f3caa01be6519d4fb614f16261a59958bbb4}{G\+F\+W\+::\+Blend\+Function\+::\+S\+R\+C\+\_\+\+A\+L\+P\+HA}, 
+\hyperlink{namespace_g_f_w_ac19434e926d01e02140f07e74ff36f3ca08026c96cd02fba552125a5e7abb6e77}{G\+F\+W\+::\+Blend\+Function\+::\+O\+N\+E\+\_\+\+M\+I\+N\+\_\+\+S\+R\+C\+\_\+\+A\+L\+P\+HA}, 
+\newline
+\hyperlink{namespace_g_f_w_ac19434e926d01e02140f07e74ff36f3ca59b7e4d8d77a6fc488bfad5dfb160ecc}{G\+F\+W\+::\+Blend\+Function\+::\+D\+S\+T\+\_\+\+A\+L\+P\+HA}, 
+\hyperlink{namespace_g_f_w_ac19434e926d01e02140f07e74ff36f3ca86015ab1ea27c303a41042578a9536c0}{G\+F\+W\+::\+Blend\+Function\+::\+O\+N\+E\+\_\+\+M\+I\+N\+\_\+\+D\+S\+T\+\_\+\+A\+L\+P\+HA}
+ \}\begin{DoxyCompactList}\small\item\em Enum with blend function common to graphics A\+P\+Is. \end{DoxyCompactList}
+\end{DoxyCompactItemize}

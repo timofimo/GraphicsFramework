@@ -1,0 +1,26 @@
+\hypertarget{_i_buffer_8h}{}\section{D\+:/\+Programming/\+Graphics\+Framework/\+Graphics\+Framework/\+Include/\+Interfaces/\+I\+Buffer.h File Reference}
+\label{_i_buffer_8h}\index{D\+:/\+Programming/\+Graphics\+Framework/\+Graphics\+Framework/\+Include/\+Interfaces/\+I\+Buffer.\+h@{D\+:/\+Programming/\+Graphics\+Framework/\+Graphics\+Framework/\+Include/\+Interfaces/\+I\+Buffer.\+h}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_g_f_w_1_1_i_buffer}{G\+F\+W\+::\+I\+Buffer}
+\begin{DoxyCompactList}\small\item\em Interface for A\+PI specific buffer class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespace_g_f_w}{G\+FW}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespace_g_f_w_a51791713eb2c4bd7901142f4e62a88e6}{G\+F\+W\+::\+Buffer\+Usage\+Bits} \{ \newline
+\hyperlink{namespace_g_f_w_a51791713eb2c4bd7901142f4e62a88e6a8ce4f5d1773718f98baf99e6b6f3ef8f}{G\+F\+W\+::\+B\+U\+F\+F\+E\+R\+\_\+\+U\+S\+A\+G\+E\+\_\+\+S\+T\+A\+T\+IC} = 1, 
+\hyperlink{namespace_g_f_w_a51791713eb2c4bd7901142f4e62a88e6a5968da6f14a32344fbd48ab8bb851c26}{G\+F\+W\+::\+B\+U\+F\+F\+E\+R\+\_\+\+U\+S\+A\+G\+E\+\_\+\+R\+E\+AD} = B\+U\+F\+F\+E\+R\+\_\+\+U\+S\+A\+G\+E\+\_\+\+S\+T\+A\+T\+IC $<$$<$ 1, 
+\hyperlink{namespace_g_f_w_a51791713eb2c4bd7901142f4e62a88e6a971d614e3a0262829fb4bf15bbd767f1}{G\+F\+W\+::\+B\+U\+F\+F\+E\+R\+\_\+\+U\+S\+A\+G\+E\+\_\+\+W\+R\+I\+TE} = B\+U\+F\+F\+E\+R\+\_\+\+U\+S\+A\+G\+E\+\_\+\+R\+E\+AD $<$$<$ 1, 
+\hyperlink{namespace_g_f_w_a51791713eb2c4bd7901142f4e62a88e6af2a96852352f01e9c8c9def2180537ca}{G\+F\+W\+::\+B\+U\+F\+F\+E\+R\+\_\+\+U\+S\+A\+G\+E\+\_\+\+R\+E\+A\+D\+\_\+\+W\+R\+I\+TE} = B\+U\+F\+F\+E\+R\+\_\+\+U\+S\+A\+G\+E\+\_\+\+R\+E\+AD $\vert$ B\+U\+F\+F\+E\+R\+\_\+\+U\+S\+A\+G\+E\+\_\+\+W\+R\+I\+TE, 
+\newline
+\hyperlink{namespace_g_f_w_a51791713eb2c4bd7901142f4e62a88e6a8c9ddda7d01bb72aedc2ae78a8419904}{G\+F\+W\+::\+B\+U\+F\+F\+E\+R\+\_\+\+U\+S\+A\+G\+E\+\_\+\+O\+N\+CE} = B\+U\+F\+F\+E\+R\+\_\+\+U\+S\+A\+G\+E\+\_\+\+W\+R\+I\+TE $<$$<$ 1, 
+\hyperlink{namespace_g_f_w_a51791713eb2c4bd7901142f4e62a88e6a94f78e57995af3d384650c827fad4908}{G\+F\+W\+::\+B\+U\+F\+F\+E\+R\+\_\+\+U\+S\+A\+G\+E\+\_\+\+P\+E\+R\+\_\+\+F\+R\+A\+ME} = B\+U\+F\+F\+E\+R\+\_\+\+U\+S\+A\+G\+E\+\_\+\+O\+N\+CE $<$$<$ 1, 
+\hyperlink{namespace_g_f_w_a51791713eb2c4bd7901142f4e62a88e6a9209622ae705ebf6f7b0946757d07f03}{G\+F\+W\+::\+B\+U\+F\+F\+E\+R\+\_\+\+U\+S\+A\+G\+E\+\_\+\+P\+E\+R\+\_\+\+D\+R\+AW} = B\+U\+F\+F\+E\+R\+\_\+\+U\+S\+A\+G\+E\+\_\+\+P\+E\+R\+\_\+\+F\+R\+A\+ME $<$$<$ 1
+ \}\begin{DoxyCompactList}\small\item\em Bits that describe the intended usage for a buffer. All bits describe interactions between the client(\+C\+P\+U) and the server(\+G\+P\+U). They have no effect on server to server interactions. The S\+T\+A\+T\+IC bit is valid when used alone. When the R\+E\+AD, W\+R\+I\+TE or R\+E\+A\+D\+\_\+\+W\+R\+I\+TE bits are set either O\+N\+CE, P\+E\+R\+\_\+\+F\+R\+A\+ME or P\+E\+R\+\_\+\+D\+R\+AW must also be set. \end{DoxyCompactList}
+\end{DoxyCompactItemize}

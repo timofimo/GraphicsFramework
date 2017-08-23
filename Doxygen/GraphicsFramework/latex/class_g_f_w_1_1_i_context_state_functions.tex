@@ -1,0 +1,445 @@
+\hypertarget{class_g_f_w_1_1_i_context_state_functions}{}\section{G\+FW\+:\+:I\+Context\+State\+Functions Class Reference}
+\label{class_g_f_w_1_1_i_context_state_functions}\index{G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}}
+
+
+Interface for methods that change the state of the context.  
+
+
+
+
+{\ttfamily \#include $<$I\+Context\+State\+Functions.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_g_f_w_1_1_i_context_state_functions_aa724020f7b666ca6639372161c1c3bb7}{$\sim$\+I\+Context\+State\+Functions} ()=default
+\item 
+virtual void \hyperlink{class_g_f_w_1_1_i_context_state_functions_a5fc1831a8590f1fca92ed86537d6a480}{Set\+Viewport} (const \hyperlink{namespace_g_f_w_1_1_math_af5ba989006b289f1e575dd7a911c1521}{Vec2} \&position, const \hyperlink{namespace_g_f_w_1_1_math_af5ba989006b289f1e575dd7a911c1521}{Vec2} \&dimensions)=0
+\begin{DoxyCompactList}\small\item\em Interface for setting the viewport of the context. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_g_f_w_1_1_i_context_state_functions_aeaaf04605dbc74af5a0aa2e2e0e2c355}{Set\+Depth\+Range} (float min, float max)=0
+\begin{DoxyCompactList}\small\item\em Interface for setting the depth range of the context. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_g_f_w_1_1_i_context_state_functions_a768ba46c0b8f967f108fee6e5b806ee6}{Set\+Point\+Size} (float size)=0
+\begin{DoxyCompactList}\small\item\em Interface for setting the size of points drawn using the context. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_g_f_w_1_1_i_context_state_functions_aeac582c0988c75d86d980d61b669e498}{Set\+Point\+Antialiasing} (bool enabled)=0
+\begin{DoxyCompactList}\small\item\em Interface for enabling/disabling antialiasing on points drawn using the context. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_g_f_w_1_1_i_context_state_functions_af8e56351f681e1c3e82be854a650d2a0}{Set\+Line\+Width} (float width)=0
+\begin{DoxyCompactList}\small\item\em Interface for setting the width of lines drawn using the context. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_g_f_w_1_1_i_context_state_functions_add655f339107b203288d74e814ae9827}{Set\+Line\+Antialiasing} (bool enabled)=0
+\begin{DoxyCompactList}\small\item\em Interface for enabling/disabling antialiasing on lines draw the context. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_g_f_w_1_1_i_context_state_functions_a88c4e68c29c47b63d2d07fd6176f7b07}{Set\+Cull\+Face} (bool enabled)=0
+\begin{DoxyCompactList}\small\item\em Interface for enabling/disabling face culling. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_g_f_w_1_1_i_context_state_functions_aeafd5ba03f7ce29872a66fdb1bcaa5f1}{Set\+Faces\+To\+Cull} (bool back\+Facing)=0
+\begin{DoxyCompactList}\small\item\em Interface to set front or back facing faces to get culled. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_g_f_w_1_1_i_context_state_functions_a44c131b392dc908ca3bb4f579df5ba57}{Set\+Front\+Face} (bool counter\+Clockwise)=0
+\begin{DoxyCompactList}\small\item\em Interface for setting the winding order of front faces. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_g_f_w_1_1_i_context_state_functions_abf50b9cb073e73caa0d49248d1f9cbb0}{Set\+Polygon\+Rasterization} (\hyperlink{namespace_g_f_w_a9e0ba6f593449f3060559ead1bc7e92f}{Rasterization\+Mode} mode)=0
+\begin{DoxyCompactList}\small\item\em Interface to set how polygons should get rasterised when drawn with this context. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_g_f_w_1_1_i_context_state_functions_a1fe4a0f924eac70a75cb43803d45be9f}{Set\+Stencil\+Test} (bool enabled)=0
+\begin{DoxyCompactList}\small\item\em Interface for enabling/disabling stencil testing. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_g_f_w_1_1_i_context_state_functions_a629dbcbe63de3f751c4e39c09644667a}{Set\+Stencil\+Function} (\hyperlink{namespace_g_f_w_a393ef12f1927ff3e7b73b11f72d551eb}{Face\+Direction} face, \hyperlink{namespace_g_f_w_a2eabb5a646179bceaab2d5e3bfce2316}{Test\+Function} function)=0
+\begin{DoxyCompactList}\small\item\em Interface for setting the test function to use when doing the stencil test for front, back or all faces. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_g_f_w_1_1_i_context_state_functions_af61e3907f133047c853204603478064b}{Set\+Stencil\+Mask} (\hyperlink{namespace_g_f_w_a393ef12f1927ff3e7b73b11f72d551eb}{Face\+Direction} face, int mask)=0
+\begin{DoxyCompactList}\small\item\em Interface for setting the stencil mask to use when doing the stencil test for front, back or all faces. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_g_f_w_1_1_i_context_state_functions_a63c7024e6bc6b8b3d74bb552e4edfc3f}{Set\+Stencil\+Operation} (\hyperlink{namespace_g_f_w_a393ef12f1927ff3e7b73b11f72d551eb}{Face\+Direction} face, \hyperlink{namespace_g_f_w_a6a4cd1647d3100386320b711cdda20d4}{Test\+Operation} stencil\+Fails, \hyperlink{namespace_g_f_w_a6a4cd1647d3100386320b711cdda20d4}{Test\+Operation} depth\+Fails, \hyperlink{namespace_g_f_w_a6a4cd1647d3100386320b711cdda20d4}{Test\+Operation} pass)=0
+\begin{DoxyCompactList}\small\item\em Interface for setting the operation to use when the stencil test fails, the depth test fails or both tests pass for front, back or all faces. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_g_f_w_1_1_i_context_state_functions_a4a0295664771c0a7654414cb620c2e10}{Set\+Alpha\+Test} (bool enabled)=0
+\begin{DoxyCompactList}\small\item\em Interface for enabling/disabling alpha testing. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_g_f_w_1_1_i_context_state_functions_ac4215f1ec06659fbc5cc7b4e494373c5}{Set\+Alpha\+Function} (\hyperlink{namespace_g_f_w_a2eabb5a646179bceaab2d5e3bfce2316}{Test\+Function} function, float ref)=0
+\begin{DoxyCompactList}\small\item\em Interface for setting the function to use when alpha testing. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_g_f_w_1_1_i_context_state_functions_af89da61bb0d9cd9d224cc78e3d22c9b7}{Set\+Depth\+Test} (bool enabled)=0
+\begin{DoxyCompactList}\small\item\em Interface for enabling/disabling depth testing. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_g_f_w_1_1_i_context_state_functions_a678a64426fe120cb1ec93de04b760683}{Set\+Depth\+Function} (\hyperlink{namespace_g_f_w_a2eabb5a646179bceaab2d5e3bfce2316}{Test\+Function} function)=0
+\begin{DoxyCompactList}\small\item\em Interface for setting the function to use when depth testing. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_g_f_w_1_1_i_context_state_functions_a801cddb223ed75c8a6a8453d35780e2e}{Set\+Blend} (bool enabled)=0
+\begin{DoxyCompactList}\small\item\em Interface for enabling/disabling blending. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_g_f_w_1_1_i_context_state_functions_aa551a7b37b0a3cfc743f045ce68e7825}{Set\+Blend\+Function} (\hyperlink{namespace_g_f_w_ac19434e926d01e02140f07e74ff36f3c}{Blend\+Function} source\+Func, \hyperlink{namespace_g_f_w_ac19434e926d01e02140f07e74ff36f3c}{Blend\+Function} destination\+Func)=0
+\begin{DoxyCompactList}\small\item\em Interface for setting the blend function for the source and destination colors. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_g_f_w_1_1_i_context_state_functions_aa18c9eb29a5e2c85440e28e72db56b05}{Set\+Color\+Clear\+Value} (const \hyperlink{namespace_g_f_w_1_1_math_a22b76a9624ba36b0f4eaa46d2e6b1fae}{Vec4} \&color)=0
+\begin{DoxyCompactList}\small\item\em Interface for setting the color to clear the color buffer to when clearing the screen. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_g_f_w_1_1_i_context_state_functions_a9adfbb8db43de0e7479c57884a00902b}{Set\+Depth\+Clear\+Value} (float depth)=0
+\begin{DoxyCompactList}\small\item\em Interface for setting the depth to clear the depth buffer to when clearing the screen. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_g_f_w_1_1_i_context_state_functions_a3d504c4c6cb646780cf433932272faef}{Set\+Stencil\+Clear\+Value} (int stencil)=0
+\begin{DoxyCompactList}\small\item\em Interface for setting the stencil value to clear the stencil buffer to when clearing the screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface for methods that change the state of the context. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_f_w_1_1_i_context_state_functions_aa724020f7b666ca6639372161c1c3bb7}\label{class_g_f_w_1_1_i_context_state_functions_aa724020f7b666ca6639372161c1c3bb7}} 
+\index{G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}!````~I\+Context\+State\+Functions@{$\sim$\+I\+Context\+State\+Functions}}
+\index{````~I\+Context\+State\+Functions@{$\sim$\+I\+Context\+State\+Functions}!G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}}
+\subsubsection{\texorpdfstring{$\sim$\+I\+Context\+State\+Functions()}{~IContextStateFunctions()}}
+{\footnotesize\ttfamily virtual G\+F\+W\+::\+I\+Context\+State\+Functions\+::$\sim$\+I\+Context\+State\+Functions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_f_w_1_1_i_context_state_functions_ac4215f1ec06659fbc5cc7b4e494373c5}\label{class_g_f_w_1_1_i_context_state_functions_ac4215f1ec06659fbc5cc7b4e494373c5}} 
+\index{G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}!Set\+Alpha\+Function@{Set\+Alpha\+Function}}
+\index{Set\+Alpha\+Function@{Set\+Alpha\+Function}!G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}}
+\subsubsection{\texorpdfstring{Set\+Alpha\+Function()}{SetAlphaFunction()}}
+{\footnotesize\ttfamily virtual void G\+F\+W\+::\+I\+Context\+State\+Functions\+::\+Set\+Alpha\+Function (\begin{DoxyParamCaption}\item[{\hyperlink{namespace_g_f_w_a2eabb5a646179bceaab2d5e3bfce2316}{Test\+Function}}]{function,  }\item[{float}]{ref }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Interface for setting the function to use when alpha testing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em function} & The function to use when alpha testing. \\
+\hline
+{\em ref} & The value the test should reference i.\+e. is relative to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_i_context_state_functions_a4a0295664771c0a7654414cb620c2e10}\label{class_g_f_w_1_1_i_context_state_functions_a4a0295664771c0a7654414cb620c2e10}} 
+\index{G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}!Set\+Alpha\+Test@{Set\+Alpha\+Test}}
+\index{Set\+Alpha\+Test@{Set\+Alpha\+Test}!G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}}
+\subsubsection{\texorpdfstring{Set\+Alpha\+Test()}{SetAlphaTest()}}
+{\footnotesize\ttfamily virtual void G\+F\+W\+::\+I\+Context\+State\+Functions\+::\+Set\+Alpha\+Test (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Interface for enabling/disabling alpha testing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enabled} & If alpha testing should be enabled. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_i_context_state_functions_a801cddb223ed75c8a6a8453d35780e2e}\label{class_g_f_w_1_1_i_context_state_functions_a801cddb223ed75c8a6a8453d35780e2e}} 
+\index{G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}!Set\+Blend@{Set\+Blend}}
+\index{Set\+Blend@{Set\+Blend}!G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}}
+\subsubsection{\texorpdfstring{Set\+Blend()}{SetBlend()}}
+{\footnotesize\ttfamily virtual void G\+F\+W\+::\+I\+Context\+State\+Functions\+::\+Set\+Blend (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Interface for enabling/disabling blending. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enabled} & If blending should be enabled. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_i_context_state_functions_aa551a7b37b0a3cfc743f045ce68e7825}\label{class_g_f_w_1_1_i_context_state_functions_aa551a7b37b0a3cfc743f045ce68e7825}} 
+\index{G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}!Set\+Blend\+Function@{Set\+Blend\+Function}}
+\index{Set\+Blend\+Function@{Set\+Blend\+Function}!G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}}
+\subsubsection{\texorpdfstring{Set\+Blend\+Function()}{SetBlendFunction()}}
+{\footnotesize\ttfamily virtual void G\+F\+W\+::\+I\+Context\+State\+Functions\+::\+Set\+Blend\+Function (\begin{DoxyParamCaption}\item[{\hyperlink{namespace_g_f_w_ac19434e926d01e02140f07e74ff36f3c}{Blend\+Function}}]{source\+Func,  }\item[{\hyperlink{namespace_g_f_w_ac19434e926d01e02140f07e74ff36f3c}{Blend\+Function}}]{destination\+Func }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Interface for setting the blend function for the source and destination colors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source\+Func} & The function to use for the source color. \\
+\hline
+{\em destination\+Func} & The function to use for the destination color. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_i_context_state_functions_aa18c9eb29a5e2c85440e28e72db56b05}\label{class_g_f_w_1_1_i_context_state_functions_aa18c9eb29a5e2c85440e28e72db56b05}} 
+\index{G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}!Set\+Color\+Clear\+Value@{Set\+Color\+Clear\+Value}}
+\index{Set\+Color\+Clear\+Value@{Set\+Color\+Clear\+Value}!G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}}
+\subsubsection{\texorpdfstring{Set\+Color\+Clear\+Value()}{SetColorClearValue()}}
+{\footnotesize\ttfamily virtual void G\+F\+W\+::\+I\+Context\+State\+Functions\+::\+Set\+Color\+Clear\+Value (\begin{DoxyParamCaption}\item[{const \hyperlink{namespace_g_f_w_1_1_math_a22b76a9624ba36b0f4eaa46d2e6b1fae}{Vec4} \&}]{color }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Interface for setting the color to clear the color buffer to when clearing the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & The color to fill the buffer with when clearing. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_i_context_state_functions_a88c4e68c29c47b63d2d07fd6176f7b07}\label{class_g_f_w_1_1_i_context_state_functions_a88c4e68c29c47b63d2d07fd6176f7b07}} 
+\index{G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}!Set\+Cull\+Face@{Set\+Cull\+Face}}
+\index{Set\+Cull\+Face@{Set\+Cull\+Face}!G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}}
+\subsubsection{\texorpdfstring{Set\+Cull\+Face()}{SetCullFace()}}
+{\footnotesize\ttfamily virtual void G\+F\+W\+::\+I\+Context\+State\+Functions\+::\+Set\+Cull\+Face (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Interface for enabling/disabling face culling. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enabled} & If face culling should be enabled. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_i_context_state_functions_a9adfbb8db43de0e7479c57884a00902b}\label{class_g_f_w_1_1_i_context_state_functions_a9adfbb8db43de0e7479c57884a00902b}} 
+\index{G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}!Set\+Depth\+Clear\+Value@{Set\+Depth\+Clear\+Value}}
+\index{Set\+Depth\+Clear\+Value@{Set\+Depth\+Clear\+Value}!G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}}
+\subsubsection{\texorpdfstring{Set\+Depth\+Clear\+Value()}{SetDepthClearValue()}}
+{\footnotesize\ttfamily virtual void G\+F\+W\+::\+I\+Context\+State\+Functions\+::\+Set\+Depth\+Clear\+Value (\begin{DoxyParamCaption}\item[{float}]{depth }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Interface for setting the depth to clear the depth buffer to when clearing the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em depth} & The depth value to fill the depth buffer with when clearing. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_i_context_state_functions_a678a64426fe120cb1ec93de04b760683}\label{class_g_f_w_1_1_i_context_state_functions_a678a64426fe120cb1ec93de04b760683}} 
+\index{G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}!Set\+Depth\+Function@{Set\+Depth\+Function}}
+\index{Set\+Depth\+Function@{Set\+Depth\+Function}!G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}}
+\subsubsection{\texorpdfstring{Set\+Depth\+Function()}{SetDepthFunction()}}
+{\footnotesize\ttfamily virtual void G\+F\+W\+::\+I\+Context\+State\+Functions\+::\+Set\+Depth\+Function (\begin{DoxyParamCaption}\item[{\hyperlink{namespace_g_f_w_a2eabb5a646179bceaab2d5e3bfce2316}{Test\+Function}}]{function }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Interface for setting the function to use when depth testing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em function} & The function to use when depth testing. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_i_context_state_functions_aeaaf04605dbc74af5a0aa2e2e0e2c355}\label{class_g_f_w_1_1_i_context_state_functions_aeaaf04605dbc74af5a0aa2e2e0e2c355}} 
+\index{G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}!Set\+Depth\+Range@{Set\+Depth\+Range}}
+\index{Set\+Depth\+Range@{Set\+Depth\+Range}!G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}}
+\subsubsection{\texorpdfstring{Set\+Depth\+Range()}{SetDepthRange()}}
+{\footnotesize\ttfamily virtual void G\+F\+W\+::\+I\+Context\+State\+Functions\+::\+Set\+Depth\+Range (\begin{DoxyParamCaption}\item[{float}]{min,  }\item[{float}]{max }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Interface for setting the depth range of the context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & The low end of the depth range. \\
+\hline
+{\em max} & The high end of the depth range. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_i_context_state_functions_af89da61bb0d9cd9d224cc78e3d22c9b7}\label{class_g_f_w_1_1_i_context_state_functions_af89da61bb0d9cd9d224cc78e3d22c9b7}} 
+\index{G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}!Set\+Depth\+Test@{Set\+Depth\+Test}}
+\index{Set\+Depth\+Test@{Set\+Depth\+Test}!G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}}
+\subsubsection{\texorpdfstring{Set\+Depth\+Test()}{SetDepthTest()}}
+{\footnotesize\ttfamily virtual void G\+F\+W\+::\+I\+Context\+State\+Functions\+::\+Set\+Depth\+Test (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Interface for enabling/disabling depth testing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enabled} & If depth testing should be enabled. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_i_context_state_functions_aeafd5ba03f7ce29872a66fdb1bcaa5f1}\label{class_g_f_w_1_1_i_context_state_functions_aeafd5ba03f7ce29872a66fdb1bcaa5f1}} 
+\index{G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}!Set\+Faces\+To\+Cull@{Set\+Faces\+To\+Cull}}
+\index{Set\+Faces\+To\+Cull@{Set\+Faces\+To\+Cull}!G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}}
+\subsubsection{\texorpdfstring{Set\+Faces\+To\+Cull()}{SetFacesToCull()}}
+{\footnotesize\ttfamily virtual void G\+F\+W\+::\+I\+Context\+State\+Functions\+::\+Set\+Faces\+To\+Cull (\begin{DoxyParamCaption}\item[{bool}]{back\+Facing }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Interface to set front or back facing faces to get culled. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em back\+Facing} & If back faces should get culled. Setting this to false will set front faces to get culled. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_i_context_state_functions_a44c131b392dc908ca3bb4f579df5ba57}\label{class_g_f_w_1_1_i_context_state_functions_a44c131b392dc908ca3bb4f579df5ba57}} 
+\index{G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}!Set\+Front\+Face@{Set\+Front\+Face}}
+\index{Set\+Front\+Face@{Set\+Front\+Face}!G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}}
+\subsubsection{\texorpdfstring{Set\+Front\+Face()}{SetFrontFace()}}
+{\footnotesize\ttfamily virtual void G\+F\+W\+::\+I\+Context\+State\+Functions\+::\+Set\+Front\+Face (\begin{DoxyParamCaption}\item[{bool}]{counter\+Clockwise }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Interface for setting the winding order of front faces. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em counter\+Clockwise} & If front faces have a counter clockwise winding order. Setting this to false will make faces with clockwise winding order front faces. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_i_context_state_functions_add655f339107b203288d74e814ae9827}\label{class_g_f_w_1_1_i_context_state_functions_add655f339107b203288d74e814ae9827}} 
+\index{G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}!Set\+Line\+Antialiasing@{Set\+Line\+Antialiasing}}
+\index{Set\+Line\+Antialiasing@{Set\+Line\+Antialiasing}!G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}}
+\subsubsection{\texorpdfstring{Set\+Line\+Antialiasing()}{SetLineAntialiasing()}}
+{\footnotesize\ttfamily virtual void G\+F\+W\+::\+I\+Context\+State\+Functions\+::\+Set\+Line\+Antialiasing (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Interface for enabling/disabling antialiasing on lines draw the context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enabled} & If antialiasing should be enabled for lines. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_i_context_state_functions_af8e56351f681e1c3e82be854a650d2a0}\label{class_g_f_w_1_1_i_context_state_functions_af8e56351f681e1c3e82be854a650d2a0}} 
+\index{G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}!Set\+Line\+Width@{Set\+Line\+Width}}
+\index{Set\+Line\+Width@{Set\+Line\+Width}!G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}}
+\subsubsection{\texorpdfstring{Set\+Line\+Width()}{SetLineWidth()}}
+{\footnotesize\ttfamily virtual void G\+F\+W\+::\+I\+Context\+State\+Functions\+::\+Set\+Line\+Width (\begin{DoxyParamCaption}\item[{float}]{width }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Interface for setting the width of lines drawn using the context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & The width of a line in pixels. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_i_context_state_functions_aeac582c0988c75d86d980d61b669e498}\label{class_g_f_w_1_1_i_context_state_functions_aeac582c0988c75d86d980d61b669e498}} 
+\index{G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}!Set\+Point\+Antialiasing@{Set\+Point\+Antialiasing}}
+\index{Set\+Point\+Antialiasing@{Set\+Point\+Antialiasing}!G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}}
+\subsubsection{\texorpdfstring{Set\+Point\+Antialiasing()}{SetPointAntialiasing()}}
+{\footnotesize\ttfamily virtual void G\+F\+W\+::\+I\+Context\+State\+Functions\+::\+Set\+Point\+Antialiasing (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Interface for enabling/disabling antialiasing on points drawn using the context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enabled} & If antialiasing should be enabled for points. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_i_context_state_functions_a768ba46c0b8f967f108fee6e5b806ee6}\label{class_g_f_w_1_1_i_context_state_functions_a768ba46c0b8f967f108fee6e5b806ee6}} 
+\index{G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}!Set\+Point\+Size@{Set\+Point\+Size}}
+\index{Set\+Point\+Size@{Set\+Point\+Size}!G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}}
+\subsubsection{\texorpdfstring{Set\+Point\+Size()}{SetPointSize()}}
+{\footnotesize\ttfamily virtual void G\+F\+W\+::\+I\+Context\+State\+Functions\+::\+Set\+Point\+Size (\begin{DoxyParamCaption}\item[{float}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Interface for setting the size of points drawn using the context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & The size of a point in pixels. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_i_context_state_functions_abf50b9cb073e73caa0d49248d1f9cbb0}\label{class_g_f_w_1_1_i_context_state_functions_abf50b9cb073e73caa0d49248d1f9cbb0}} 
+\index{G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}!Set\+Polygon\+Rasterization@{Set\+Polygon\+Rasterization}}
+\index{Set\+Polygon\+Rasterization@{Set\+Polygon\+Rasterization}!G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}}
+\subsubsection{\texorpdfstring{Set\+Polygon\+Rasterization()}{SetPolygonRasterization()}}
+{\footnotesize\ttfamily virtual void G\+F\+W\+::\+I\+Context\+State\+Functions\+::\+Set\+Polygon\+Rasterization (\begin{DoxyParamCaption}\item[{\hyperlink{namespace_g_f_w_a9e0ba6f593449f3060559ead1bc7e92f}{Rasterization\+Mode}}]{mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Interface to set how polygons should get rasterised when drawn with this context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & The rasterization mode for the polygons. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_i_context_state_functions_a3d504c4c6cb646780cf433932272faef}\label{class_g_f_w_1_1_i_context_state_functions_a3d504c4c6cb646780cf433932272faef}} 
+\index{G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}!Set\+Stencil\+Clear\+Value@{Set\+Stencil\+Clear\+Value}}
+\index{Set\+Stencil\+Clear\+Value@{Set\+Stencil\+Clear\+Value}!G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}}
+\subsubsection{\texorpdfstring{Set\+Stencil\+Clear\+Value()}{SetStencilClearValue()}}
+{\footnotesize\ttfamily virtual void G\+F\+W\+::\+I\+Context\+State\+Functions\+::\+Set\+Stencil\+Clear\+Value (\begin{DoxyParamCaption}\item[{int}]{stencil }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Interface for setting the stencil value to clear the stencil buffer to when clearing the screen. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stencil} & The stencil value to fill the stencil buffer with when clearing. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_i_context_state_functions_a629dbcbe63de3f751c4e39c09644667a}\label{class_g_f_w_1_1_i_context_state_functions_a629dbcbe63de3f751c4e39c09644667a}} 
+\index{G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}!Set\+Stencil\+Function@{Set\+Stencil\+Function}}
+\index{Set\+Stencil\+Function@{Set\+Stencil\+Function}!G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}}
+\subsubsection{\texorpdfstring{Set\+Stencil\+Function()}{SetStencilFunction()}}
+{\footnotesize\ttfamily virtual void G\+F\+W\+::\+I\+Context\+State\+Functions\+::\+Set\+Stencil\+Function (\begin{DoxyParamCaption}\item[{\hyperlink{namespace_g_f_w_a393ef12f1927ff3e7b73b11f72d551eb}{Face\+Direction}}]{face,  }\item[{\hyperlink{namespace_g_f_w_a2eabb5a646179bceaab2d5e3bfce2316}{Test\+Function}}]{function }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Interface for setting the test function to use when doing the stencil test for front, back or all faces. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em face} & The face to change the function for. \\
+\hline
+{\em function} & The function to set it to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_i_context_state_functions_af61e3907f133047c853204603478064b}\label{class_g_f_w_1_1_i_context_state_functions_af61e3907f133047c853204603478064b}} 
+\index{G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}!Set\+Stencil\+Mask@{Set\+Stencil\+Mask}}
+\index{Set\+Stencil\+Mask@{Set\+Stencil\+Mask}!G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}}
+\subsubsection{\texorpdfstring{Set\+Stencil\+Mask()}{SetStencilMask()}}
+{\footnotesize\ttfamily virtual void G\+F\+W\+::\+I\+Context\+State\+Functions\+::\+Set\+Stencil\+Mask (\begin{DoxyParamCaption}\item[{\hyperlink{namespace_g_f_w_a393ef12f1927ff3e7b73b11f72d551eb}{Face\+Direction}}]{face,  }\item[{int}]{mask }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Interface for setting the stencil mask to use when doing the stencil test for front, back or all faces. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em face} & The face to change the mask for. \\
+\hline
+{\em mask} & The mask to set it to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_i_context_state_functions_a63c7024e6bc6b8b3d74bb552e4edfc3f}\label{class_g_f_w_1_1_i_context_state_functions_a63c7024e6bc6b8b3d74bb552e4edfc3f}} 
+\index{G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}!Set\+Stencil\+Operation@{Set\+Stencil\+Operation}}
+\index{Set\+Stencil\+Operation@{Set\+Stencil\+Operation}!G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}}
+\subsubsection{\texorpdfstring{Set\+Stencil\+Operation()}{SetStencilOperation()}}
+{\footnotesize\ttfamily virtual void G\+F\+W\+::\+I\+Context\+State\+Functions\+::\+Set\+Stencil\+Operation (\begin{DoxyParamCaption}\item[{\hyperlink{namespace_g_f_w_a393ef12f1927ff3e7b73b11f72d551eb}{Face\+Direction}}]{face,  }\item[{\hyperlink{namespace_g_f_w_a6a4cd1647d3100386320b711cdda20d4}{Test\+Operation}}]{stencil\+Fails,  }\item[{\hyperlink{namespace_g_f_w_a6a4cd1647d3100386320b711cdda20d4}{Test\+Operation}}]{depth\+Fails,  }\item[{\hyperlink{namespace_g_f_w_a6a4cd1647d3100386320b711cdda20d4}{Test\+Operation}}]{pass }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Interface for setting the operation to use when the stencil test fails, the depth test fails or both tests pass for front, back or all faces. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em face} & The face to change the operation for. \\
+\hline
+{\em stencil\+Fails} & The operation to use when the stencil test fails. \\
+\hline
+{\em depth\+Fails} & The operation to use when the depth test fails. \\
+\hline
+{\em pass} & The operation to use when both tests pass. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_i_context_state_functions_a1fe4a0f924eac70a75cb43803d45be9f}\label{class_g_f_w_1_1_i_context_state_functions_a1fe4a0f924eac70a75cb43803d45be9f}} 
+\index{G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}!Set\+Stencil\+Test@{Set\+Stencil\+Test}}
+\index{Set\+Stencil\+Test@{Set\+Stencil\+Test}!G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}}
+\subsubsection{\texorpdfstring{Set\+Stencil\+Test()}{SetStencilTest()}}
+{\footnotesize\ttfamily virtual void G\+F\+W\+::\+I\+Context\+State\+Functions\+::\+Set\+Stencil\+Test (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Interface for enabling/disabling stencil testing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enabled} & If stencil testing should be enabled. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_i_context_state_functions_a5fc1831a8590f1fca92ed86537d6a480}\label{class_g_f_w_1_1_i_context_state_functions_a5fc1831a8590f1fca92ed86537d6a480}} 
+\index{G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}!Set\+Viewport@{Set\+Viewport}}
+\index{Set\+Viewport@{Set\+Viewport}!G\+F\+W\+::\+I\+Context\+State\+Functions@{G\+F\+W\+::\+I\+Context\+State\+Functions}}
+\subsubsection{\texorpdfstring{Set\+Viewport()}{SetViewport()}}
+{\footnotesize\ttfamily virtual void G\+F\+W\+::\+I\+Context\+State\+Functions\+::\+Set\+Viewport (\begin{DoxyParamCaption}\item[{const \hyperlink{namespace_g_f_w_1_1_math_af5ba989006b289f1e575dd7a911c1521}{Vec2} \&}]{position,  }\item[{const \hyperlink{namespace_g_f_w_1_1_math_af5ba989006b289f1e575dd7a911c1521}{Vec2} \&}]{dimensions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Interface for setting the viewport of the context. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The corner position where the viewport starts. \\
+\hline
+{\em dimensions} & The width and height of the viewport. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Programming/\+Graphics\+Framework/\+Graphics\+Framework/\+Include/\+Interfaces/\hyperlink{_i_context_state_functions_8h}{I\+Context\+State\+Functions.\+h}\end{DoxyCompactItemize}

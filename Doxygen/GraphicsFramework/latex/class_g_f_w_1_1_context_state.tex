@@ -1,0 +1,870 @@
+\hypertarget{class_g_f_w_1_1_context_state}{}\section{G\+FW\+:\+:Context\+State Class Reference}
+\label{class_g_f_w_1_1_context_state}\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+
+
+This class is used to manage the state of the context. It\textquotesingle{}s used the change the state and get the current state. Unnecessary state change will not be executed. The current state can be recorded and restored using this class.  
+
+
+
+
+{\ttfamily \#include $<$Context\+State.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_g_f_w_1_1_context_state_ad459179ac46661f8cc69e1394e4bb37a}{Context\+State} (\hyperlink{class_g_f_w_1_1_i_context_state_functions}{I\+Context\+State\+Functions} $\ast$state\+Functions)
+\begin{DoxyCompactList}\small\item\em Creates the context state and sets the state of the graphics A\+PI to equal the default values if they don\textquotesingle{}t already. \end{DoxyCompactList}\item 
+\hyperlink{class_g_f_w_1_1_context_state_ae40d89f70977fbbcd5da8cab7ca4458a}{$\sim$\+Context\+State} ()
+\item 
+void \hyperlink{class_g_f_w_1_1_context_state_a94ca9211a09c4dbe706ae462bf2cfb36}{Record\+State} ()
+\begin{DoxyCompactList}\small\item\em Record the state. Use \hyperlink{class_g_f_w_1_1_context_state_a3ca74e03440f1e847a6b61a24e3730e8}{Restore\+Recorded\+State()} to go back to this state. \end{DoxyCompactList}\item 
+void \hyperlink{class_g_f_w_1_1_context_state_a3ca74e03440f1e847a6b61a24e3730e8}{Restore\+Recorded\+State} ()
+\begin{DoxyCompactList}\small\item\em Restores the context to the last recorded state. \end{DoxyCompactList}\item 
+void \hyperlink{class_g_f_w_1_1_context_state_a5bc411cb78a13eef92a360a9c549ac41}{Set\+Viewport} (const \hyperlink{namespace_g_f_w_1_1_math_af5ba989006b289f1e575dd7a911c1521}{Vec2} \&position, const \hyperlink{namespace_g_f_w_1_1_math_af5ba989006b289f1e575dd7a911c1521}{Vec2} \&dimensions)
+\begin{DoxyCompactList}\small\item\em Set the position and the dimensions of the viewport. \end{DoxyCompactList}\item 
+\hyperlink{namespace_g_f_w_1_1_math_af5ba989006b289f1e575dd7a911c1521}{Vec2} \hyperlink{class_g_f_w_1_1_context_state_ab152d162bb24377f81b0bf612f1b89b7}{Get\+Viewport\+Position} () const
+\item 
+\hyperlink{namespace_g_f_w_1_1_math_af5ba989006b289f1e575dd7a911c1521}{Vec2} \hyperlink{class_g_f_w_1_1_context_state_aaa24b34588b2278f80354a255946f73d}{Get\+Viewport\+Dimensions} () const
+\item 
+void \hyperlink{class_g_f_w_1_1_context_state_af2ead11abc05ce454e09d4357f70015d}{Set\+Depth\+Range} (float min, float max)
+\begin{DoxyCompactList}\small\item\em Set the low and high end of the depth range. \end{DoxyCompactList}\item 
+void \hyperlink{class_g_f_w_1_1_context_state_a07c2828b667abf5cb3539b89ba8328ff}{Get\+Depth\+Range} (float \&min, float \&max) const
+\begin{DoxyCompactList}\small\item\em The low and high end of the set depth range. \end{DoxyCompactList}\item 
+void \hyperlink{class_g_f_w_1_1_context_state_a916f5ca06b29cb5a506759748cb9bb75}{Set\+Point\+Size} (float size)
+\begin{DoxyCompactList}\small\item\em Set the point size when drawing points. \end{DoxyCompactList}\item 
+float \hyperlink{class_g_f_w_1_1_context_state_a93b78ad64f73d1301592bd06a88ef4d0}{Get\+Point\+Size} () const
+\item 
+void \hyperlink{class_g_f_w_1_1_context_state_a0efa713914d80597e2f5b6e225190818}{Set\+Point\+Antialiasing} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Enable/\+Disable antialiasing for points. \end{DoxyCompactList}\item 
+bool \hyperlink{class_g_f_w_1_1_context_state_a9c1b9ff0dc7ec95bc15243ec61c9f1b5}{Is\+Point\+Antialiasing\+Enabled} () const
+\item 
+void \hyperlink{class_g_f_w_1_1_context_state_a0cbbcf527df67fec78f9e9e834b7f562}{Set\+Line\+Width} (float width)
+\begin{DoxyCompactList}\small\item\em Set the line width when drawing lines. \end{DoxyCompactList}\item 
+float \hyperlink{class_g_f_w_1_1_context_state_a6c1756ec8ba275b93d6356f0eb88f45b}{Get\+Line\+Width} () const
+\item 
+void \hyperlink{class_g_f_w_1_1_context_state_adacd3a218340e71e104b8a40cf3b8919}{Set\+Line\+Antialiasing} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Enable/\+Disable antialiasing for lines. \end{DoxyCompactList}\item 
+bool \hyperlink{class_g_f_w_1_1_context_state_aeb3c3a071d43c86e5799562f847c432a}{Is\+Line\+Antialiasing\+Enabled} () const
+\item 
+void \hyperlink{class_g_f_w_1_1_context_state_a273f8e3a54f461c3bb50ba55e0ff21bd}{Set\+Face\+Culling} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Enable/\+Disable face culling. \end{DoxyCompactList}\item 
+bool \hyperlink{class_g_f_w_1_1_context_state_a805c41d30f739fd1a92a13fabe31aad4}{Is\+Face\+Culling\+Enabled} () const
+\item 
+void \hyperlink{class_g_f_w_1_1_context_state_a1faffa6e3a9eb8f1974f8ed122b773b0}{Set\+Faces\+To\+Cull} (bool back\+Facing)
+\begin{DoxyCompactList}\small\item\em Set the faces to be culled when face culling is enabled. \end{DoxyCompactList}\item 
+bool \hyperlink{class_g_f_w_1_1_context_state_a9f16011cffc9ab8a95e2a9d88c73a097}{Is\+Culling\+Back\+Faces} () const
+\item 
+void \hyperlink{class_g_f_w_1_1_context_state_a16c6663de05bd0fbc054fd86f6e4ccd9}{Set\+Front\+Face} (bool counter\+Clockwise)
+\begin{DoxyCompactList}\small\item\em Set the winding order of front faces. \end{DoxyCompactList}\item 
+bool \hyperlink{class_g_f_w_1_1_context_state_a6e3342e574aa0a9811563f8575ed1f0f}{Front\+Face\+Is\+Counter\+Clockwise} () const
+\item 
+void \hyperlink{class_g_f_w_1_1_context_state_a85d785bbab573d3e336874c52aad937d}{Set\+Polygon\+Rasterization} (\hyperlink{namespace_g_f_w_a9e0ba6f593449f3060559ead1bc7e92f}{Rasterization\+Mode} mode)
+\begin{DoxyCompactList}\small\item\em Set the mode to use when rasterizing polygons. \end{DoxyCompactList}\item 
+\hyperlink{namespace_g_f_w_a9e0ba6f593449f3060559ead1bc7e92f}{Rasterization\+Mode} \hyperlink{class_g_f_w_1_1_context_state_ae999ededfc3a52439dad56e6979c906d}{Get\+Polygon\+Rasterization} () const
+\item 
+void \hyperlink{class_g_f_w_1_1_context_state_ac229c8a8ea65968a1cfb095096729fa2}{Set\+Stencil\+Test} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Enable/\+Disable stencil testing. \end{DoxyCompactList}\item 
+bool \hyperlink{class_g_f_w_1_1_context_state_ac93b9f2c0fc99226c1a14818d45eafd0}{Is\+Stencil\+Test\+Enabled} () const
+\item 
+void \hyperlink{class_g_f_w_1_1_context_state_ad898aef17c3c1e30cfaa5290a965ce7a}{Set\+Stencil\+Function} (\hyperlink{namespace_g_f_w_a393ef12f1927ff3e7b73b11f72d551eb}{Face\+Direction} face, \hyperlink{namespace_g_f_w_a2eabb5a646179bceaab2d5e3bfce2316}{Test\+Function} function)
+\begin{DoxyCompactList}\small\item\em Set the function to use when stencil testing. \end{DoxyCompactList}\item 
+\hyperlink{namespace_g_f_w_a2eabb5a646179bceaab2d5e3bfce2316}{Test\+Function} \hyperlink{class_g_f_w_1_1_context_state_a35a9f2abcdd97e409ede000f9338b256}{Get\+Front\+Face\+Stencil\+Function} () const
+\item 
+\hyperlink{namespace_g_f_w_a2eabb5a646179bceaab2d5e3bfce2316}{Test\+Function} \hyperlink{class_g_f_w_1_1_context_state_a8ec8b1992b1c9247c908a40e40ef1faa}{Get\+Back\+Face\+Stencil\+Function} () const
+\item 
+\hyperlink{namespace_g_f_w_a2eabb5a646179bceaab2d5e3bfce2316}{Test\+Function} \hyperlink{class_g_f_w_1_1_context_state_a7ddf3257ec54d4fb039e8873ae493836}{Get\+Stencil\+Function} () const
+\item 
+void \hyperlink{class_g_f_w_1_1_context_state_a110e8f561931a8ce5c37feb3d7f53c89}{Set\+Stencil\+Mask} (\hyperlink{namespace_g_f_w_a393ef12f1927ff3e7b73b11f72d551eb}{Face\+Direction} face, int mask)
+\begin{DoxyCompactList}\small\item\em Set the stencil mask to use when stencil testing. \end{DoxyCompactList}\item 
+int \hyperlink{class_g_f_w_1_1_context_state_ad60fd3436d99fe95a85bff52d21d741b}{Get\+Front\+Face\+Stencil\+Mask} () const
+\item 
+int \hyperlink{class_g_f_w_1_1_context_state_a00c3e1b3984204d8a23d56dcc57bead5}{Get\+Back\+Face\+Stencil\+Mask} () const
+\item 
+int \hyperlink{class_g_f_w_1_1_context_state_ad4a8a7a19848145d39bec3de746de41c}{Get\+Stencil\+Mask} () const
+\item 
+void \hyperlink{class_g_f_w_1_1_context_state_a5715fafc7014e913a4c2ad4b85c0bd8a}{Set\+Stencil\+Operation} (\hyperlink{namespace_g_f_w_a393ef12f1927ff3e7b73b11f72d551eb}{Face\+Direction} face, \hyperlink{namespace_g_f_w_a6a4cd1647d3100386320b711cdda20d4}{Test\+Operation} stencil\+Fails, \hyperlink{namespace_g_f_w_a6a4cd1647d3100386320b711cdda20d4}{Test\+Operation} depth\+Fails, \hyperlink{namespace_g_f_w_a6a4cd1647d3100386320b711cdda20d4}{Test\+Operation} pass)
+\begin{DoxyCompactList}\small\item\em Set the operations to use when the stencil test fails, the depth test fails or both pass. \end{DoxyCompactList}\item 
+void \hyperlink{class_g_f_w_1_1_context_state_a13f64606832754c2d39b19a1c3444305}{Get\+Front\+Face\+Stencil\+Operation} (\hyperlink{namespace_g_f_w_a6a4cd1647d3100386320b711cdda20d4}{Test\+Operation} \&stencil\+Fails, \hyperlink{namespace_g_f_w_a6a4cd1647d3100386320b711cdda20d4}{Test\+Operation} \&depth\+Fails, \hyperlink{namespace_g_f_w_a6a4cd1647d3100386320b711cdda20d4}{Test\+Operation} \&pass) const
+\item 
+void \hyperlink{class_g_f_w_1_1_context_state_a4e252d61ca05ed6b5e45520c44495afe}{Get\+Back\+Face\+Stencil\+Operation} (\hyperlink{namespace_g_f_w_a6a4cd1647d3100386320b711cdda20d4}{Test\+Operation} \&stencil\+Fails, \hyperlink{namespace_g_f_w_a6a4cd1647d3100386320b711cdda20d4}{Test\+Operation} \&depth\+Fails, \hyperlink{namespace_g_f_w_a6a4cd1647d3100386320b711cdda20d4}{Test\+Operation} \&pass) const
+\item 
+void \hyperlink{class_g_f_w_1_1_context_state_a383820958721e83122acd561cebd90f8}{Get\+Stencil\+Operation} (\hyperlink{namespace_g_f_w_a6a4cd1647d3100386320b711cdda20d4}{Test\+Operation} \&stencil\+Fails, \hyperlink{namespace_g_f_w_a6a4cd1647d3100386320b711cdda20d4}{Test\+Operation} \&depth\+Fails, \hyperlink{namespace_g_f_w_a6a4cd1647d3100386320b711cdda20d4}{Test\+Operation} \&pass) const
+\item 
+void \hyperlink{class_g_f_w_1_1_context_state_a389b0eb730c3e4dfccb2ca8e733c8059}{Set\+Alpha\+Test} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Enable/\+Disable alpha testing. \end{DoxyCompactList}\item 
+bool \hyperlink{class_g_f_w_1_1_context_state_aa46202064aa37cf14a1db6be93de6ad6}{Is\+Alpha\+Test\+Enabled} () const
+\item 
+void \hyperlink{class_g_f_w_1_1_context_state_a050bc15d46f42296f22cbcb0eaf07711}{Set\+Alpha\+Function} (\hyperlink{namespace_g_f_w_a2eabb5a646179bceaab2d5e3bfce2316}{Test\+Function} function, float ref)
+\begin{DoxyCompactList}\small\item\em Set the function and the reference value to use when alpha testing. \end{DoxyCompactList}\item 
+void \hyperlink{class_g_f_w_1_1_context_state_a52d1f42170e2e2e6018307f09f27492a}{Get\+Alpha\+Function} (\hyperlink{namespace_g_f_w_a2eabb5a646179bceaab2d5e3bfce2316}{Test\+Function} \&function, float \&ref) const
+\item 
+void \hyperlink{class_g_f_w_1_1_context_state_aa4dc94bfca31669f31ab8953a06ca456}{Set\+Depth\+Test} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Enable/\+Disable depth testing. \end{DoxyCompactList}\item 
+bool \hyperlink{class_g_f_w_1_1_context_state_a02f2fbadaa17c84b40a930202844bd97}{Is\+Depth\+Test\+Enabled} () const
+\item 
+void \hyperlink{class_g_f_w_1_1_context_state_aa0d4ecd0d061a53edb09a30e5b8142eb}{Set\+Depth\+Function} (\hyperlink{namespace_g_f_w_a2eabb5a646179bceaab2d5e3bfce2316}{Test\+Function} function)
+\begin{DoxyCompactList}\small\item\em Set the function to use when depth testing. \end{DoxyCompactList}\item 
+\hyperlink{namespace_g_f_w_a2eabb5a646179bceaab2d5e3bfce2316}{Test\+Function} \hyperlink{class_g_f_w_1_1_context_state_ab07db17bd0d1ecc225e9e5902a5fbfdb}{Get\+Depth\+Function} () const
+\item 
+void \hyperlink{class_g_f_w_1_1_context_state_adfdffbd81d730021f511e4912ce2da27}{Set\+Blend} (bool enabled)
+\begin{DoxyCompactList}\small\item\em Enable/\+Disable blending. \end{DoxyCompactList}\item 
+bool \hyperlink{class_g_f_w_1_1_context_state_a575b9362eefb1c7b16f82236a5a963cd}{Is\+Blending\+Enabled} () const
+\item 
+void \hyperlink{class_g_f_w_1_1_context_state_ab2f28c92d5d196ab04c085b3a519fd10}{Set\+Blend\+Function} (\hyperlink{namespace_g_f_w_ac19434e926d01e02140f07e74ff36f3c}{Blend\+Function} source\+Func, \hyperlink{namespace_g_f_w_ac19434e926d01e02140f07e74ff36f3c}{Blend\+Function} destination\+Func)
+\begin{DoxyCompactList}\small\item\em Set the blend function to use when blending. \end{DoxyCompactList}\item 
+\hyperlink{namespace_g_f_w_ac19434e926d01e02140f07e74ff36f3c}{Blend\+Function} \hyperlink{class_g_f_w_1_1_context_state_abd9c0c7e6dc4d31cf9b9203718dfd3ee}{Get\+Source\+Blend\+Function} () const
+\item 
+\hyperlink{namespace_g_f_w_ac19434e926d01e02140f07e74ff36f3c}{Blend\+Function} \hyperlink{class_g_f_w_1_1_context_state_a90b57498e47494b9c3f5d70c61c4ec38}{Get\+Destination\+Blend\+Function} () const
+\item 
+void \hyperlink{class_g_f_w_1_1_context_state_aa38214d4dd523c36e281c93125691dc5}{Set\+Color\+Clear\+Value} (const \hyperlink{namespace_g_f_w_1_1_math_a22b76a9624ba36b0f4eaa46d2e6b1fae}{Vec4} \&color)
+\begin{DoxyCompactList}\small\item\em Set the value to clear the color buffer to when clearing. \end{DoxyCompactList}\item 
+\hyperlink{namespace_g_f_w_1_1_math_a22b76a9624ba36b0f4eaa46d2e6b1fae}{Vec4} \hyperlink{class_g_f_w_1_1_context_state_a062d3326dae5fb494b28391d832ece16}{Get\+Color\+Clear\+Calue} () const
+\item 
+void \hyperlink{class_g_f_w_1_1_context_state_a1c4e031a0199eea45a508f54b4c1e774}{Set\+Depth\+Clear\+Value} (float depth)
+\begin{DoxyCompactList}\small\item\em Set the value to clear the depth buffer to when clearing. \end{DoxyCompactList}\item 
+float \hyperlink{class_g_f_w_1_1_context_state_a807dad661c3be910ede6f15810210e15}{Get\+Depth\+Clear\+Value} () const
+\item 
+void \hyperlink{class_g_f_w_1_1_context_state_ace57bac69f05af23f1f65626a83cf22b}{Set\+Stencil\+Clear\+Value} (int stencil)
+\begin{DoxyCompactList}\small\item\em Set the value to clear the stencil buffer to when clearing. \end{DoxyCompactList}\item 
+int \hyperlink{class_g_f_w_1_1_context_state_aa7ea61ad3f05efb7da33eef7a51ad547}{Get\+Stencil\+Clear\+Value} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class is used to manage the state of the context. It\textquotesingle{}s used the change the state and get the current state. Unnecessary state change will not be executed. The current state can be recorded and restored using this class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_ad459179ac46661f8cc69e1394e4bb37a}\label{class_g_f_w_1_1_context_state_ad459179ac46661f8cc69e1394e4bb37a}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Context\+State@{Context\+State}}
+\index{Context\+State@{Context\+State}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Context\+State()}{ContextState()}}
+{\footnotesize\ttfamily G\+F\+W\+::\+Context\+State\+::\+Context\+State (\begin{DoxyParamCaption}\item[{\hyperlink{class_g_f_w_1_1_i_context_state_functions}{I\+Context\+State\+Functions} $\ast$}]{state\+Functions }\end{DoxyParamCaption})}
+
+
+
+Creates the context state and sets the state of the graphics A\+PI to equal the default values if they don\textquotesingle{}t already. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em state\+Functions} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_ae40d89f70977fbbcd5da8cab7ca4458a}\label{class_g_f_w_1_1_context_state_ae40d89f70977fbbcd5da8cab7ca4458a}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!````~Context\+State@{$\sim$\+Context\+State}}
+\index{````~Context\+State@{$\sim$\+Context\+State}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{$\sim$\+Context\+State()}{~ContextState()}}
+{\footnotesize\ttfamily G\+F\+W\+::\+Context\+State\+::$\sim$\+Context\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_a6e3342e574aa0a9811563f8575ed1f0f}\label{class_g_f_w_1_1_context_state_a6e3342e574aa0a9811563f8575ed1f0f}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Front\+Face\+Is\+Counter\+Clockwise@{Front\+Face\+Is\+Counter\+Clockwise}}
+\index{Front\+Face\+Is\+Counter\+Clockwise@{Front\+Face\+Is\+Counter\+Clockwise}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Front\+Face\+Is\+Counter\+Clockwise()}{FrontFaceIsCounterClockwise()}}
+{\footnotesize\ttfamily bool G\+F\+W\+::\+Context\+State\+::\+Front\+Face\+Is\+Counter\+Clockwise (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+If front faces are counter clockwise. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_a52d1f42170e2e2e6018307f09f27492a}\label{class_g_f_w_1_1_context_state_a52d1f42170e2e2e6018307f09f27492a}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Get\+Alpha\+Function@{Get\+Alpha\+Function}}
+\index{Get\+Alpha\+Function@{Get\+Alpha\+Function}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Get\+Alpha\+Function()}{GetAlphaFunction()}}
+{\footnotesize\ttfamily void G\+F\+W\+::\+Context\+State\+::\+Get\+Alpha\+Function (\begin{DoxyParamCaption}\item[{\hyperlink{namespace_g_f_w_a2eabb5a646179bceaab2d5e3bfce2316}{Test\+Function} \&}]{function,  }\item[{float \&}]{ref }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The set function and the reference value to use when alpha testing. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em function} & output for the function. \\
+\hline
+{\em ref} & output for the reference value. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_a8ec8b1992b1c9247c908a40e40ef1faa}\label{class_g_f_w_1_1_context_state_a8ec8b1992b1c9247c908a40e40ef1faa}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Get\+Back\+Face\+Stencil\+Function@{Get\+Back\+Face\+Stencil\+Function}}
+\index{Get\+Back\+Face\+Stencil\+Function@{Get\+Back\+Face\+Stencil\+Function}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Get\+Back\+Face\+Stencil\+Function()}{GetBackFaceStencilFunction()}}
+{\footnotesize\ttfamily \hyperlink{namespace_g_f_w_a2eabb5a646179bceaab2d5e3bfce2316}{G\+F\+W\+::\+Test\+Function} G\+F\+W\+::\+Context\+State\+::\+Get\+Back\+Face\+Stencil\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The stencil function to use when stencil testing back faces. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_a00c3e1b3984204d8a23d56dcc57bead5}\label{class_g_f_w_1_1_context_state_a00c3e1b3984204d8a23d56dcc57bead5}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Get\+Back\+Face\+Stencil\+Mask@{Get\+Back\+Face\+Stencil\+Mask}}
+\index{Get\+Back\+Face\+Stencil\+Mask@{Get\+Back\+Face\+Stencil\+Mask}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Get\+Back\+Face\+Stencil\+Mask()}{GetBackFaceStencilMask()}}
+{\footnotesize\ttfamily int G\+F\+W\+::\+Context\+State\+::\+Get\+Back\+Face\+Stencil\+Mask (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The set stencil mask to use when stencil testing for back faces. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_a4e252d61ca05ed6b5e45520c44495afe}\label{class_g_f_w_1_1_context_state_a4e252d61ca05ed6b5e45520c44495afe}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Get\+Back\+Face\+Stencil\+Operation@{Get\+Back\+Face\+Stencil\+Operation}}
+\index{Get\+Back\+Face\+Stencil\+Operation@{Get\+Back\+Face\+Stencil\+Operation}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Get\+Back\+Face\+Stencil\+Operation()}{GetBackFaceStencilOperation()}}
+{\footnotesize\ttfamily void G\+F\+W\+::\+Context\+State\+::\+Get\+Back\+Face\+Stencil\+Operation (\begin{DoxyParamCaption}\item[{\hyperlink{namespace_g_f_w_a6a4cd1647d3100386320b711cdda20d4}{Test\+Operation} \&}]{stencil\+Fails,  }\item[{\hyperlink{namespace_g_f_w_a6a4cd1647d3100386320b711cdda20d4}{Test\+Operation} \&}]{depth\+Fails,  }\item[{\hyperlink{namespace_g_f_w_a6a4cd1647d3100386320b711cdda20d4}{Test\+Operation} \&}]{pass }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The stencil operations to use when the stencil test fails, the depth test fails or both tests pass for back faces. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em stencil\+Fails} & output for the operation when the stencil test fails. \\
+\hline
+{\em depth\+Fails} & output for the opertation when the depth test fails. \\
+\hline
+{\em pass} & output for the opertation when both tests pass. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_a062d3326dae5fb494b28391d832ece16}\label{class_g_f_w_1_1_context_state_a062d3326dae5fb494b28391d832ece16}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Get\+Color\+Clear\+Calue@{Get\+Color\+Clear\+Calue}}
+\index{Get\+Color\+Clear\+Calue@{Get\+Color\+Clear\+Calue}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Get\+Color\+Clear\+Calue()}{GetColorClearCalue()}}
+{\footnotesize\ttfamily \hyperlink{namespace_g_f_w_1_1_math_a22b76a9624ba36b0f4eaa46d2e6b1fae}{G\+F\+W\+::\+Vec4} G\+F\+W\+::\+Context\+State\+::\+Get\+Color\+Clear\+Calue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The set color to clear the color buffer to. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_a807dad661c3be910ede6f15810210e15}\label{class_g_f_w_1_1_context_state_a807dad661c3be910ede6f15810210e15}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Get\+Depth\+Clear\+Value@{Get\+Depth\+Clear\+Value}}
+\index{Get\+Depth\+Clear\+Value@{Get\+Depth\+Clear\+Value}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Get\+Depth\+Clear\+Value()}{GetDepthClearValue()}}
+{\footnotesize\ttfamily float G\+F\+W\+::\+Context\+State\+::\+Get\+Depth\+Clear\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The set value to clear the depth buffer to. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_ab07db17bd0d1ecc225e9e5902a5fbfdb}\label{class_g_f_w_1_1_context_state_ab07db17bd0d1ecc225e9e5902a5fbfdb}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Get\+Depth\+Function@{Get\+Depth\+Function}}
+\index{Get\+Depth\+Function@{Get\+Depth\+Function}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Get\+Depth\+Function()}{GetDepthFunction()}}
+{\footnotesize\ttfamily \hyperlink{namespace_g_f_w_a2eabb5a646179bceaab2d5e3bfce2316}{G\+F\+W\+::\+Test\+Function} G\+F\+W\+::\+Context\+State\+::\+Get\+Depth\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The set function to use when depth testing. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_a07c2828b667abf5cb3539b89ba8328ff}\label{class_g_f_w_1_1_context_state_a07c2828b667abf5cb3539b89ba8328ff}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Get\+Depth\+Range@{Get\+Depth\+Range}}
+\index{Get\+Depth\+Range@{Get\+Depth\+Range}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Get\+Depth\+Range()}{GetDepthRange()}}
+{\footnotesize\ttfamily void G\+F\+W\+::\+Context\+State\+::\+Get\+Depth\+Range (\begin{DoxyParamCaption}\item[{float \&}]{min,  }\item[{float \&}]{max }\end{DoxyParamCaption}) const}
+
+
+
+The low and high end of the set depth range. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & output the low end of the depth range. \\
+\hline
+{\em max} & output the high end of the depth range. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_a90b57498e47494b9c3f5d70c61c4ec38}\label{class_g_f_w_1_1_context_state_a90b57498e47494b9c3f5d70c61c4ec38}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Get\+Destination\+Blend\+Function@{Get\+Destination\+Blend\+Function}}
+\index{Get\+Destination\+Blend\+Function@{Get\+Destination\+Blend\+Function}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Get\+Destination\+Blend\+Function()}{GetDestinationBlendFunction()}}
+{\footnotesize\ttfamily \hyperlink{namespace_g_f_w_ac19434e926d01e02140f07e74ff36f3c}{G\+F\+W\+::\+Blend\+Function} G\+F\+W\+::\+Context\+State\+::\+Get\+Destination\+Blend\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The set blend function to use on the destination color when blending. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_a35a9f2abcdd97e409ede000f9338b256}\label{class_g_f_w_1_1_context_state_a35a9f2abcdd97e409ede000f9338b256}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Get\+Front\+Face\+Stencil\+Function@{Get\+Front\+Face\+Stencil\+Function}}
+\index{Get\+Front\+Face\+Stencil\+Function@{Get\+Front\+Face\+Stencil\+Function}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Get\+Front\+Face\+Stencil\+Function()}{GetFrontFaceStencilFunction()}}
+{\footnotesize\ttfamily \hyperlink{namespace_g_f_w_a2eabb5a646179bceaab2d5e3bfce2316}{G\+F\+W\+::\+Test\+Function} G\+F\+W\+::\+Context\+State\+::\+Get\+Front\+Face\+Stencil\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The stencil function to use when stencil testing front faces. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_ad60fd3436d99fe95a85bff52d21d741b}\label{class_g_f_w_1_1_context_state_ad60fd3436d99fe95a85bff52d21d741b}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Get\+Front\+Face\+Stencil\+Mask@{Get\+Front\+Face\+Stencil\+Mask}}
+\index{Get\+Front\+Face\+Stencil\+Mask@{Get\+Front\+Face\+Stencil\+Mask}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Get\+Front\+Face\+Stencil\+Mask()}{GetFrontFaceStencilMask()}}
+{\footnotesize\ttfamily int G\+F\+W\+::\+Context\+State\+::\+Get\+Front\+Face\+Stencil\+Mask (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The set stencil mask to use when stencil testing for front faces. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_a13f64606832754c2d39b19a1c3444305}\label{class_g_f_w_1_1_context_state_a13f64606832754c2d39b19a1c3444305}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Get\+Front\+Face\+Stencil\+Operation@{Get\+Front\+Face\+Stencil\+Operation}}
+\index{Get\+Front\+Face\+Stencil\+Operation@{Get\+Front\+Face\+Stencil\+Operation}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Get\+Front\+Face\+Stencil\+Operation()}{GetFrontFaceStencilOperation()}}
+{\footnotesize\ttfamily void G\+F\+W\+::\+Context\+State\+::\+Get\+Front\+Face\+Stencil\+Operation (\begin{DoxyParamCaption}\item[{\hyperlink{namespace_g_f_w_a6a4cd1647d3100386320b711cdda20d4}{Test\+Operation} \&}]{stencil\+Fails,  }\item[{\hyperlink{namespace_g_f_w_a6a4cd1647d3100386320b711cdda20d4}{Test\+Operation} \&}]{depth\+Fails,  }\item[{\hyperlink{namespace_g_f_w_a6a4cd1647d3100386320b711cdda20d4}{Test\+Operation} \&}]{pass }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The stencil operations to use when the stencil test fails, the depth test fails or both tests pass for front faces. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em stencil\+Fails} & output for the operation when the stencil test fails. \\
+\hline
+{\em depth\+Fails} & output for the opertation when the depth test fails. \\
+\hline
+{\em pass} & output for the opertation when both tests pass. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_a6c1756ec8ba275b93d6356f0eb88f45b}\label{class_g_f_w_1_1_context_state_a6c1756ec8ba275b93d6356f0eb88f45b}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Get\+Line\+Width@{Get\+Line\+Width}}
+\index{Get\+Line\+Width@{Get\+Line\+Width}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Get\+Line\+Width()}{GetLineWidth()}}
+{\footnotesize\ttfamily float G\+F\+W\+::\+Context\+State\+::\+Get\+Line\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The set line width in pixels. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_a93b78ad64f73d1301592bd06a88ef4d0}\label{class_g_f_w_1_1_context_state_a93b78ad64f73d1301592bd06a88ef4d0}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Get\+Point\+Size@{Get\+Point\+Size}}
+\index{Get\+Point\+Size@{Get\+Point\+Size}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Get\+Point\+Size()}{GetPointSize()}}
+{\footnotesize\ttfamily float G\+F\+W\+::\+Context\+State\+::\+Get\+Point\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The set point size in pixels. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_ae999ededfc3a52439dad56e6979c906d}\label{class_g_f_w_1_1_context_state_ae999ededfc3a52439dad56e6979c906d}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Get\+Polygon\+Rasterization@{Get\+Polygon\+Rasterization}}
+\index{Get\+Polygon\+Rasterization@{Get\+Polygon\+Rasterization}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Get\+Polygon\+Rasterization()}{GetPolygonRasterization()}}
+{\footnotesize\ttfamily \hyperlink{namespace_g_f_w_a9e0ba6f593449f3060559ead1bc7e92f}{G\+F\+W\+::\+Rasterization\+Mode} G\+F\+W\+::\+Context\+State\+::\+Get\+Polygon\+Rasterization (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The set mode to use when rasterizing polygons. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_abd9c0c7e6dc4d31cf9b9203718dfd3ee}\label{class_g_f_w_1_1_context_state_abd9c0c7e6dc4d31cf9b9203718dfd3ee}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Get\+Source\+Blend\+Function@{Get\+Source\+Blend\+Function}}
+\index{Get\+Source\+Blend\+Function@{Get\+Source\+Blend\+Function}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Get\+Source\+Blend\+Function()}{GetSourceBlendFunction()}}
+{\footnotesize\ttfamily \hyperlink{namespace_g_f_w_ac19434e926d01e02140f07e74ff36f3c}{G\+F\+W\+::\+Blend\+Function} G\+F\+W\+::\+Context\+State\+::\+Get\+Source\+Blend\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The set blend function to use on the source color when blending. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_aa7ea61ad3f05efb7da33eef7a51ad547}\label{class_g_f_w_1_1_context_state_aa7ea61ad3f05efb7da33eef7a51ad547}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Get\+Stencil\+Clear\+Value@{Get\+Stencil\+Clear\+Value}}
+\index{Get\+Stencil\+Clear\+Value@{Get\+Stencil\+Clear\+Value}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Get\+Stencil\+Clear\+Value()}{GetStencilClearValue()}}
+{\footnotesize\ttfamily int G\+F\+W\+::\+Context\+State\+::\+Get\+Stencil\+Clear\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The set value to clear the stencil buffer to. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_a7ddf3257ec54d4fb039e8873ae493836}\label{class_g_f_w_1_1_context_state_a7ddf3257ec54d4fb039e8873ae493836}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Get\+Stencil\+Function@{Get\+Stencil\+Function}}
+\index{Get\+Stencil\+Function@{Get\+Stencil\+Function}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Get\+Stencil\+Function()}{GetStencilFunction()}}
+{\footnotesize\ttfamily \hyperlink{namespace_g_f_w_a2eabb5a646179bceaab2d5e3bfce2316}{G\+F\+W\+::\+Test\+Function} G\+F\+W\+::\+Context\+State\+::\+Get\+Stencil\+Function (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The stencil function to use when stencil testing both front and back faces. Asserts if the function of front and back faces don\textquotesingle{}t equal each other. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_ad4a8a7a19848145d39bec3de746de41c}\label{class_g_f_w_1_1_context_state_ad4a8a7a19848145d39bec3de746de41c}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Get\+Stencil\+Mask@{Get\+Stencil\+Mask}}
+\index{Get\+Stencil\+Mask@{Get\+Stencil\+Mask}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Get\+Stencil\+Mask()}{GetStencilMask()}}
+{\footnotesize\ttfamily int G\+F\+W\+::\+Context\+State\+::\+Get\+Stencil\+Mask (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The set stencil mask to use when stencil testing for both front and back faces. Asserts if the mask of front and back faces don\textquotesingle{}t equal each other. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_a383820958721e83122acd561cebd90f8}\label{class_g_f_w_1_1_context_state_a383820958721e83122acd561cebd90f8}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Get\+Stencil\+Operation@{Get\+Stencil\+Operation}}
+\index{Get\+Stencil\+Operation@{Get\+Stencil\+Operation}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Get\+Stencil\+Operation()}{GetStencilOperation()}}
+{\footnotesize\ttfamily void G\+F\+W\+::\+Context\+State\+::\+Get\+Stencil\+Operation (\begin{DoxyParamCaption}\item[{\hyperlink{namespace_g_f_w_a6a4cd1647d3100386320b711cdda20d4}{Test\+Operation} \&}]{stencil\+Fails,  }\item[{\hyperlink{namespace_g_f_w_a6a4cd1647d3100386320b711cdda20d4}{Test\+Operation} \&}]{depth\+Fails,  }\item[{\hyperlink{namespace_g_f_w_a6a4cd1647d3100386320b711cdda20d4}{Test\+Operation} \&}]{pass }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The stencil operations to use when the stencil test fails, the depth test fails or both tests pass for both front and back faces. Asserts if operations of the front and back face are not equal to each other. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em stencil\+Fails} & output for the operation when the stencil test fails. \\
+\hline
+{\em depth\+Fails} & output for the opertation when the depth test fails. \\
+\hline
+{\em pass} & output for the opertation when both tests pass. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_aaa24b34588b2278f80354a255946f73d}\label{class_g_f_w_1_1_context_state_aaa24b34588b2278f80354a255946f73d}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Get\+Viewport\+Dimensions@{Get\+Viewport\+Dimensions}}
+\index{Get\+Viewport\+Dimensions@{Get\+Viewport\+Dimensions}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Get\+Viewport\+Dimensions()}{GetViewportDimensions()}}
+{\footnotesize\ttfamily \hyperlink{namespace_g_f_w_1_1_math_af5ba989006b289f1e575dd7a911c1521}{G\+F\+W\+::\+Vec2} G\+F\+W\+::\+Context\+State\+::\+Get\+Viewport\+Dimensions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The set dimensions of the viewport. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_ab152d162bb24377f81b0bf612f1b89b7}\label{class_g_f_w_1_1_context_state_ab152d162bb24377f81b0bf612f1b89b7}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Get\+Viewport\+Position@{Get\+Viewport\+Position}}
+\index{Get\+Viewport\+Position@{Get\+Viewport\+Position}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Get\+Viewport\+Position()}{GetViewportPosition()}}
+{\footnotesize\ttfamily \hyperlink{namespace_g_f_w_1_1_math_af5ba989006b289f1e575dd7a911c1521}{G\+F\+W\+::\+Vec2} G\+F\+W\+::\+Context\+State\+::\+Get\+Viewport\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The set position of the viewport. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_aa46202064aa37cf14a1db6be93de6ad6}\label{class_g_f_w_1_1_context_state_aa46202064aa37cf14a1db6be93de6ad6}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Is\+Alpha\+Test\+Enabled@{Is\+Alpha\+Test\+Enabled}}
+\index{Is\+Alpha\+Test\+Enabled@{Is\+Alpha\+Test\+Enabled}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Is\+Alpha\+Test\+Enabled()}{IsAlphaTestEnabled()}}
+{\footnotesize\ttfamily bool G\+F\+W\+::\+Context\+State\+::\+Is\+Alpha\+Test\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+If alpha testing is enabled. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_a575b9362eefb1c7b16f82236a5a963cd}\label{class_g_f_w_1_1_context_state_a575b9362eefb1c7b16f82236a5a963cd}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Is\+Blending\+Enabled@{Is\+Blending\+Enabled}}
+\index{Is\+Blending\+Enabled@{Is\+Blending\+Enabled}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Is\+Blending\+Enabled()}{IsBlendingEnabled()}}
+{\footnotesize\ttfamily bool G\+F\+W\+::\+Context\+State\+::\+Is\+Blending\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+If blending is enabled. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_a9f16011cffc9ab8a95e2a9d88c73a097}\label{class_g_f_w_1_1_context_state_a9f16011cffc9ab8a95e2a9d88c73a097}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Is\+Culling\+Back\+Faces@{Is\+Culling\+Back\+Faces}}
+\index{Is\+Culling\+Back\+Faces@{Is\+Culling\+Back\+Faces}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Is\+Culling\+Back\+Faces()}{IsCullingBackFaces()}}
+{\footnotesize\ttfamily bool G\+F\+W\+::\+Context\+State\+::\+Is\+Culling\+Back\+Faces (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+If the faces to be culled are back faces. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_a02f2fbadaa17c84b40a930202844bd97}\label{class_g_f_w_1_1_context_state_a02f2fbadaa17c84b40a930202844bd97}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Is\+Depth\+Test\+Enabled@{Is\+Depth\+Test\+Enabled}}
+\index{Is\+Depth\+Test\+Enabled@{Is\+Depth\+Test\+Enabled}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Is\+Depth\+Test\+Enabled()}{IsDepthTestEnabled()}}
+{\footnotesize\ttfamily bool G\+F\+W\+::\+Context\+State\+::\+Is\+Depth\+Test\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+If depth testing is enabled. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_a805c41d30f739fd1a92a13fabe31aad4}\label{class_g_f_w_1_1_context_state_a805c41d30f739fd1a92a13fabe31aad4}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Is\+Face\+Culling\+Enabled@{Is\+Face\+Culling\+Enabled}}
+\index{Is\+Face\+Culling\+Enabled@{Is\+Face\+Culling\+Enabled}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Is\+Face\+Culling\+Enabled()}{IsFaceCullingEnabled()}}
+{\footnotesize\ttfamily bool G\+F\+W\+::\+Context\+State\+::\+Is\+Face\+Culling\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+If face culling is enabled. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_aeb3c3a071d43c86e5799562f847c432a}\label{class_g_f_w_1_1_context_state_aeb3c3a071d43c86e5799562f847c432a}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Is\+Line\+Antialiasing\+Enabled@{Is\+Line\+Antialiasing\+Enabled}}
+\index{Is\+Line\+Antialiasing\+Enabled@{Is\+Line\+Antialiasing\+Enabled}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Is\+Line\+Antialiasing\+Enabled()}{IsLineAntialiasingEnabled()}}
+{\footnotesize\ttfamily bool G\+F\+W\+::\+Context\+State\+::\+Is\+Line\+Antialiasing\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+If antialiasing for lines is enabled. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_a9c1b9ff0dc7ec95bc15243ec61c9f1b5}\label{class_g_f_w_1_1_context_state_a9c1b9ff0dc7ec95bc15243ec61c9f1b5}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Is\+Point\+Antialiasing\+Enabled@{Is\+Point\+Antialiasing\+Enabled}}
+\index{Is\+Point\+Antialiasing\+Enabled@{Is\+Point\+Antialiasing\+Enabled}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Is\+Point\+Antialiasing\+Enabled()}{IsPointAntialiasingEnabled()}}
+{\footnotesize\ttfamily bool G\+F\+W\+::\+Context\+State\+::\+Is\+Point\+Antialiasing\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+If antialiasing for points is enabled. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_ac93b9f2c0fc99226c1a14818d45eafd0}\label{class_g_f_w_1_1_context_state_ac93b9f2c0fc99226c1a14818d45eafd0}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Is\+Stencil\+Test\+Enabled@{Is\+Stencil\+Test\+Enabled}}
+\index{Is\+Stencil\+Test\+Enabled@{Is\+Stencil\+Test\+Enabled}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Is\+Stencil\+Test\+Enabled()}{IsStencilTestEnabled()}}
+{\footnotesize\ttfamily bool G\+F\+W\+::\+Context\+State\+::\+Is\+Stencil\+Test\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+If stencil testing is enabled. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_a94ca9211a09c4dbe706ae462bf2cfb36}\label{class_g_f_w_1_1_context_state_a94ca9211a09c4dbe706ae462bf2cfb36}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Record\+State@{Record\+State}}
+\index{Record\+State@{Record\+State}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Record\+State()}{RecordState()}}
+{\footnotesize\ttfamily void G\+F\+W\+::\+Context\+State\+::\+Record\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Record the state. Use \hyperlink{class_g_f_w_1_1_context_state_a3ca74e03440f1e847a6b61a24e3730e8}{Restore\+Recorded\+State()} to go back to this state. 
+
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_a3ca74e03440f1e847a6b61a24e3730e8}\label{class_g_f_w_1_1_context_state_a3ca74e03440f1e847a6b61a24e3730e8}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Restore\+Recorded\+State@{Restore\+Recorded\+State}}
+\index{Restore\+Recorded\+State@{Restore\+Recorded\+State}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Restore\+Recorded\+State()}{RestoreRecordedState()}}
+{\footnotesize\ttfamily void G\+F\+W\+::\+Context\+State\+::\+Restore\+Recorded\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Restores the context to the last recorded state. 
+
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_a050bc15d46f42296f22cbcb0eaf07711}\label{class_g_f_w_1_1_context_state_a050bc15d46f42296f22cbcb0eaf07711}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Set\+Alpha\+Function@{Set\+Alpha\+Function}}
+\index{Set\+Alpha\+Function@{Set\+Alpha\+Function}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Set\+Alpha\+Function()}{SetAlphaFunction()}}
+{\footnotesize\ttfamily void G\+F\+W\+::\+Context\+State\+::\+Set\+Alpha\+Function (\begin{DoxyParamCaption}\item[{\hyperlink{namespace_g_f_w_a2eabb5a646179bceaab2d5e3bfce2316}{Test\+Function}}]{function,  }\item[{float}]{ref }\end{DoxyParamCaption})}
+
+
+
+Set the function and the reference value to use when alpha testing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em function} & The function to use when alpha testing. \\
+\hline
+{\em ref} & The reference value to use when alpha testing. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_a389b0eb730c3e4dfccb2ca8e733c8059}\label{class_g_f_w_1_1_context_state_a389b0eb730c3e4dfccb2ca8e733c8059}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Set\+Alpha\+Test@{Set\+Alpha\+Test}}
+\index{Set\+Alpha\+Test@{Set\+Alpha\+Test}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Set\+Alpha\+Test()}{SetAlphaTest()}}
+{\footnotesize\ttfamily void G\+F\+W\+::\+Context\+State\+::\+Set\+Alpha\+Test (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Enable/\+Disable alpha testing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enabled} & If alpha testing should be enabled. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_adfdffbd81d730021f511e4912ce2da27}\label{class_g_f_w_1_1_context_state_adfdffbd81d730021f511e4912ce2da27}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Set\+Blend@{Set\+Blend}}
+\index{Set\+Blend@{Set\+Blend}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Set\+Blend()}{SetBlend()}}
+{\footnotesize\ttfamily void G\+F\+W\+::\+Context\+State\+::\+Set\+Blend (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Enable/\+Disable blending. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enabled} & If blending should be enabled. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_ab2f28c92d5d196ab04c085b3a519fd10}\label{class_g_f_w_1_1_context_state_ab2f28c92d5d196ab04c085b3a519fd10}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Set\+Blend\+Function@{Set\+Blend\+Function}}
+\index{Set\+Blend\+Function@{Set\+Blend\+Function}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Set\+Blend\+Function()}{SetBlendFunction()}}
+{\footnotesize\ttfamily void G\+F\+W\+::\+Context\+State\+::\+Set\+Blend\+Function (\begin{DoxyParamCaption}\item[{\hyperlink{namespace_g_f_w_ac19434e926d01e02140f07e74ff36f3c}{Blend\+Function}}]{source\+Func,  }\item[{\hyperlink{namespace_g_f_w_ac19434e926d01e02140f07e74ff36f3c}{Blend\+Function}}]{destination\+Func }\end{DoxyParamCaption})}
+
+
+
+Set the blend function to use when blending. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source\+Func} & The function to use when blending the source color. \\
+\hline
+{\em destination\+Func} & The function to use when blending the destination color. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_aa38214d4dd523c36e281c93125691dc5}\label{class_g_f_w_1_1_context_state_aa38214d4dd523c36e281c93125691dc5}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Set\+Color\+Clear\+Value@{Set\+Color\+Clear\+Value}}
+\index{Set\+Color\+Clear\+Value@{Set\+Color\+Clear\+Value}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Set\+Color\+Clear\+Value()}{SetColorClearValue()}}
+{\footnotesize\ttfamily void G\+F\+W\+::\+Context\+State\+::\+Set\+Color\+Clear\+Value (\begin{DoxyParamCaption}\item[{const \hyperlink{namespace_g_f_w_1_1_math_a22b76a9624ba36b0f4eaa46d2e6b1fae}{Vec4} \&}]{color }\end{DoxyParamCaption})}
+
+
+
+Set the value to clear the color buffer to when clearing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color} & The value to clear the color buffer to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_a1c4e031a0199eea45a508f54b4c1e774}\label{class_g_f_w_1_1_context_state_a1c4e031a0199eea45a508f54b4c1e774}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Set\+Depth\+Clear\+Value@{Set\+Depth\+Clear\+Value}}
+\index{Set\+Depth\+Clear\+Value@{Set\+Depth\+Clear\+Value}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Set\+Depth\+Clear\+Value()}{SetDepthClearValue()}}
+{\footnotesize\ttfamily void G\+F\+W\+::\+Context\+State\+::\+Set\+Depth\+Clear\+Value (\begin{DoxyParamCaption}\item[{float}]{depth }\end{DoxyParamCaption})}
+
+
+
+Set the value to clear the depth buffer to when clearing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em depth} & The value to clear the depth buffer to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_aa0d4ecd0d061a53edb09a30e5b8142eb}\label{class_g_f_w_1_1_context_state_aa0d4ecd0d061a53edb09a30e5b8142eb}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Set\+Depth\+Function@{Set\+Depth\+Function}}
+\index{Set\+Depth\+Function@{Set\+Depth\+Function}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Set\+Depth\+Function()}{SetDepthFunction()}}
+{\footnotesize\ttfamily void G\+F\+W\+::\+Context\+State\+::\+Set\+Depth\+Function (\begin{DoxyParamCaption}\item[{\hyperlink{namespace_g_f_w_a2eabb5a646179bceaab2d5e3bfce2316}{Test\+Function}}]{function }\end{DoxyParamCaption})}
+
+
+
+Set the function to use when depth testing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em function} & The function to use when depth testing. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_af2ead11abc05ce454e09d4357f70015d}\label{class_g_f_w_1_1_context_state_af2ead11abc05ce454e09d4357f70015d}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Set\+Depth\+Range@{Set\+Depth\+Range}}
+\index{Set\+Depth\+Range@{Set\+Depth\+Range}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Set\+Depth\+Range()}{SetDepthRange()}}
+{\footnotesize\ttfamily void G\+F\+W\+::\+Context\+State\+::\+Set\+Depth\+Range (\begin{DoxyParamCaption}\item[{float}]{min,  }\item[{float}]{max }\end{DoxyParamCaption})}
+
+
+
+Set the low and high end of the depth range. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & The low end of the depth range. \\
+\hline
+{\em max} & The high end of the depth range. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_aa4dc94bfca31669f31ab8953a06ca456}\label{class_g_f_w_1_1_context_state_aa4dc94bfca31669f31ab8953a06ca456}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Set\+Depth\+Test@{Set\+Depth\+Test}}
+\index{Set\+Depth\+Test@{Set\+Depth\+Test}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Set\+Depth\+Test()}{SetDepthTest()}}
+{\footnotesize\ttfamily void G\+F\+W\+::\+Context\+State\+::\+Set\+Depth\+Test (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Enable/\+Disable depth testing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enabled} & If depth testing should be enabled. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_a273f8e3a54f461c3bb50ba55e0ff21bd}\label{class_g_f_w_1_1_context_state_a273f8e3a54f461c3bb50ba55e0ff21bd}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Set\+Face\+Culling@{Set\+Face\+Culling}}
+\index{Set\+Face\+Culling@{Set\+Face\+Culling}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Set\+Face\+Culling()}{SetFaceCulling()}}
+{\footnotesize\ttfamily void G\+F\+W\+::\+Context\+State\+::\+Set\+Face\+Culling (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Enable/\+Disable face culling. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enabled} & If face culling should be enabled. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_a1faffa6e3a9eb8f1974f8ed122b773b0}\label{class_g_f_w_1_1_context_state_a1faffa6e3a9eb8f1974f8ed122b773b0}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Set\+Faces\+To\+Cull@{Set\+Faces\+To\+Cull}}
+\index{Set\+Faces\+To\+Cull@{Set\+Faces\+To\+Cull}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Set\+Faces\+To\+Cull()}{SetFacesToCull()}}
+{\footnotesize\ttfamily void G\+F\+W\+::\+Context\+State\+::\+Set\+Faces\+To\+Cull (\begin{DoxyParamCaption}\item[{bool}]{back\+Facing }\end{DoxyParamCaption})}
+
+
+
+Set the faces to be culled when face culling is enabled. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em back\+Facing} & If back faces should be culled. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_a16c6663de05bd0fbc054fd86f6e4ccd9}\label{class_g_f_w_1_1_context_state_a16c6663de05bd0fbc054fd86f6e4ccd9}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Set\+Front\+Face@{Set\+Front\+Face}}
+\index{Set\+Front\+Face@{Set\+Front\+Face}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Set\+Front\+Face()}{SetFrontFace()}}
+{\footnotesize\ttfamily void G\+F\+W\+::\+Context\+State\+::\+Set\+Front\+Face (\begin{DoxyParamCaption}\item[{bool}]{counter\+Clockwise }\end{DoxyParamCaption})}
+
+
+
+Set the winding order of front faces. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em counter\+Clockwise} & If the winding order for front faces should be counter clockwise. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_adacd3a218340e71e104b8a40cf3b8919}\label{class_g_f_w_1_1_context_state_adacd3a218340e71e104b8a40cf3b8919}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Set\+Line\+Antialiasing@{Set\+Line\+Antialiasing}}
+\index{Set\+Line\+Antialiasing@{Set\+Line\+Antialiasing}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Set\+Line\+Antialiasing()}{SetLineAntialiasing()}}
+{\footnotesize\ttfamily void G\+F\+W\+::\+Context\+State\+::\+Set\+Line\+Antialiasing (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Enable/\+Disable antialiasing for lines. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enabled} & If antialiasing should be enabled. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_a0cbbcf527df67fec78f9e9e834b7f562}\label{class_g_f_w_1_1_context_state_a0cbbcf527df67fec78f9e9e834b7f562}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Set\+Line\+Width@{Set\+Line\+Width}}
+\index{Set\+Line\+Width@{Set\+Line\+Width}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Set\+Line\+Width()}{SetLineWidth()}}
+{\footnotesize\ttfamily void G\+F\+W\+::\+Context\+State\+::\+Set\+Line\+Width (\begin{DoxyParamCaption}\item[{float}]{width }\end{DoxyParamCaption})}
+
+
+
+Set the line width when drawing lines. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & The width in pixels. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_a0efa713914d80597e2f5b6e225190818}\label{class_g_f_w_1_1_context_state_a0efa713914d80597e2f5b6e225190818}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Set\+Point\+Antialiasing@{Set\+Point\+Antialiasing}}
+\index{Set\+Point\+Antialiasing@{Set\+Point\+Antialiasing}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Set\+Point\+Antialiasing()}{SetPointAntialiasing()}}
+{\footnotesize\ttfamily void G\+F\+W\+::\+Context\+State\+::\+Set\+Point\+Antialiasing (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Enable/\+Disable antialiasing for points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enabled} & If antialiasing should be enabled. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_a916f5ca06b29cb5a506759748cb9bb75}\label{class_g_f_w_1_1_context_state_a916f5ca06b29cb5a506759748cb9bb75}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Set\+Point\+Size@{Set\+Point\+Size}}
+\index{Set\+Point\+Size@{Set\+Point\+Size}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Set\+Point\+Size()}{SetPointSize()}}
+{\footnotesize\ttfamily void G\+F\+W\+::\+Context\+State\+::\+Set\+Point\+Size (\begin{DoxyParamCaption}\item[{float}]{size }\end{DoxyParamCaption})}
+
+
+
+Set the point size when drawing points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & The point size in pixels. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_a85d785bbab573d3e336874c52aad937d}\label{class_g_f_w_1_1_context_state_a85d785bbab573d3e336874c52aad937d}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Set\+Polygon\+Rasterization@{Set\+Polygon\+Rasterization}}
+\index{Set\+Polygon\+Rasterization@{Set\+Polygon\+Rasterization}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Set\+Polygon\+Rasterization()}{SetPolygonRasterization()}}
+{\footnotesize\ttfamily void G\+F\+W\+::\+Context\+State\+::\+Set\+Polygon\+Rasterization (\begin{DoxyParamCaption}\item[{\hyperlink{namespace_g_f_w_a9e0ba6f593449f3060559ead1bc7e92f}{Rasterization\+Mode}}]{mode }\end{DoxyParamCaption})}
+
+
+
+Set the mode to use when rasterizing polygons. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & The mode to set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_ace57bac69f05af23f1f65626a83cf22b}\label{class_g_f_w_1_1_context_state_ace57bac69f05af23f1f65626a83cf22b}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Set\+Stencil\+Clear\+Value@{Set\+Stencil\+Clear\+Value}}
+\index{Set\+Stencil\+Clear\+Value@{Set\+Stencil\+Clear\+Value}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Set\+Stencil\+Clear\+Value()}{SetStencilClearValue()}}
+{\footnotesize\ttfamily void G\+F\+W\+::\+Context\+State\+::\+Set\+Stencil\+Clear\+Value (\begin{DoxyParamCaption}\item[{int}]{stencil }\end{DoxyParamCaption})}
+
+
+
+Set the value to clear the stencil buffer to when clearing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em stencil} & The value to clear the stencil buffer to. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_ad898aef17c3c1e30cfaa5290a965ce7a}\label{class_g_f_w_1_1_context_state_ad898aef17c3c1e30cfaa5290a965ce7a}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Set\+Stencil\+Function@{Set\+Stencil\+Function}}
+\index{Set\+Stencil\+Function@{Set\+Stencil\+Function}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Set\+Stencil\+Function()}{SetStencilFunction()}}
+{\footnotesize\ttfamily void G\+F\+W\+::\+Context\+State\+::\+Set\+Stencil\+Function (\begin{DoxyParamCaption}\item[{\hyperlink{namespace_g_f_w_a393ef12f1927ff3e7b73b11f72d551eb}{Face\+Direction}}]{face,  }\item[{\hyperlink{namespace_g_f_w_a2eabb5a646179bceaab2d5e3bfce2316}{Test\+Function}}]{function }\end{DoxyParamCaption})}
+
+
+
+Set the function to use when stencil testing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em face} & The faces to set the function for. \\
+\hline
+{\em function} & The function to set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_a110e8f561931a8ce5c37feb3d7f53c89}\label{class_g_f_w_1_1_context_state_a110e8f561931a8ce5c37feb3d7f53c89}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Set\+Stencil\+Mask@{Set\+Stencil\+Mask}}
+\index{Set\+Stencil\+Mask@{Set\+Stencil\+Mask}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Set\+Stencil\+Mask()}{SetStencilMask()}}
+{\footnotesize\ttfamily void G\+F\+W\+::\+Context\+State\+::\+Set\+Stencil\+Mask (\begin{DoxyParamCaption}\item[{\hyperlink{namespace_g_f_w_a393ef12f1927ff3e7b73b11f72d551eb}{Face\+Direction}}]{face,  }\item[{int}]{mask }\end{DoxyParamCaption})}
+
+
+
+Set the stencil mask to use when stencil testing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em face} & The faces to set the mask for. \\
+\hline
+{\em mask} & The mask to set. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_a5715fafc7014e913a4c2ad4b85c0bd8a}\label{class_g_f_w_1_1_context_state_a5715fafc7014e913a4c2ad4b85c0bd8a}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Set\+Stencil\+Operation@{Set\+Stencil\+Operation}}
+\index{Set\+Stencil\+Operation@{Set\+Stencil\+Operation}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Set\+Stencil\+Operation()}{SetStencilOperation()}}
+{\footnotesize\ttfamily void G\+F\+W\+::\+Context\+State\+::\+Set\+Stencil\+Operation (\begin{DoxyParamCaption}\item[{\hyperlink{namespace_g_f_w_a393ef12f1927ff3e7b73b11f72d551eb}{Face\+Direction}}]{face,  }\item[{\hyperlink{namespace_g_f_w_a6a4cd1647d3100386320b711cdda20d4}{Test\+Operation}}]{stencil\+Fails,  }\item[{\hyperlink{namespace_g_f_w_a6a4cd1647d3100386320b711cdda20d4}{Test\+Operation}}]{depth\+Fails,  }\item[{\hyperlink{namespace_g_f_w_a6a4cd1647d3100386320b711cdda20d4}{Test\+Operation}}]{pass }\end{DoxyParamCaption})}
+
+
+
+Set the operations to use when the stencil test fails, the depth test fails or both pass. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em face} & The faces to set these operations for. \\
+\hline
+{\em stencil\+Fails} & The operation to use when the stencil test fails. \\
+\hline
+{\em depth\+Fails} & The operation to use when the depth test fails. \\
+\hline
+{\em pass} & The operation to use when both tests pass. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_ac229c8a8ea65968a1cfb095096729fa2}\label{class_g_f_w_1_1_context_state_ac229c8a8ea65968a1cfb095096729fa2}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Set\+Stencil\+Test@{Set\+Stencil\+Test}}
+\index{Set\+Stencil\+Test@{Set\+Stencil\+Test}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Set\+Stencil\+Test()}{SetStencilTest()}}
+{\footnotesize\ttfamily void G\+F\+W\+::\+Context\+State\+::\+Set\+Stencil\+Test (\begin{DoxyParamCaption}\item[{bool}]{enabled }\end{DoxyParamCaption})}
+
+
+
+Enable/\+Disable stencil testing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em enabled} & If stencil testing should be enabled. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_context_state_a5bc411cb78a13eef92a360a9c549ac41}\label{class_g_f_w_1_1_context_state_a5bc411cb78a13eef92a360a9c549ac41}} 
+\index{G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}!Set\+Viewport@{Set\+Viewport}}
+\index{Set\+Viewport@{Set\+Viewport}!G\+F\+W\+::\+Context\+State@{G\+F\+W\+::\+Context\+State}}
+\subsubsection{\texorpdfstring{Set\+Viewport()}{SetViewport()}}
+{\footnotesize\ttfamily void G\+F\+W\+::\+Context\+State\+::\+Set\+Viewport (\begin{DoxyParamCaption}\item[{const \hyperlink{namespace_g_f_w_1_1_math_af5ba989006b289f1e575dd7a911c1521}{Vec2} \&}]{position,  }\item[{const \hyperlink{namespace_g_f_w_1_1_math_af5ba989006b289f1e575dd7a911c1521}{Vec2} \&}]{dimensions }\end{DoxyParamCaption})}
+
+
+
+Set the position and the dimensions of the viewport. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & The position of the viewport. \\
+\hline
+{\em dimensions} & The dimentions of the viewport. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Programming/\+Graphics\+Framework/\+Graphics\+Framework/\+Include/\hyperlink{_context_state_8h}{Context\+State.\+h}\item 
+D\+:/\+Programming/\+Graphics\+Framework/\+Graphics\+Framework/\+Source/\hyperlink{_context_state_8cpp}{Context\+State.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,147 @@
+\hypertarget{class_g_f_w_1_1_i_buffer}{}\section{G\+FW\+:\+:I\+Buffer Class Reference}
+\label{class_g_f_w_1_1_i_buffer}\index{G\+F\+W\+::\+I\+Buffer@{G\+F\+W\+::\+I\+Buffer}}
+
+
+Interface for A\+PI specific buffer class.  
+
+
+
+
+{\ttfamily \#include $<$I\+Buffer.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_g_f_w_1_1_i_buffer_aef075064f4de9081c18ff6e4a4847e52}{$\sim$\+I\+Buffer} ()=default
+\item 
+virtual void \hyperlink{class_g_f_w_1_1_i_buffer_aeda77fc8f158dd79bc28520f92827f92}{Create} (unsigned size, int usage\+Bits)=0
+\begin{DoxyCompactList}\small\item\em Function to create a buffer without data. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_g_f_w_1_1_i_buffer_a049c56d462a1a85b4ecb88b417ef5e4e}{Create} (unsigned size, const void $\ast$data, int usage\+Bits)=0
+\begin{DoxyCompactList}\small\item\em Function to create a buffer and set the initial data. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_g_f_w_1_1_i_buffer_a3028dee9374054e3e448f8d609df654b}{Write} (unsigned offset, unsigned size, const void $\ast$data)=0
+\begin{DoxyCompactList}\small\item\em Function to write or update the data in the buffer. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_g_f_w_1_1_i_buffer_a97c3fbf03423db1abc78a8aa343fed4f}{Read} (unsigned offset, unsigned size, void $\ast$data)=0
+\begin{DoxyCompactList}\small\item\em Function to read data from the buffer. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_g_f_w_1_1_i_buffer_aba2a08606a8670cf1dc98f93095fbd88}{Clear} ()=0
+\begin{DoxyCompactList}\small\item\em Function to clear the entire buffer to 0. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_g_f_w_1_1_i_buffer_ac1605029b3f1e8cbfef8d30053ddac59}{Clear} (const void $\ast$pattern)=0
+\begin{DoxyCompactList}\small\item\em Function to clear the entire buffer to the specified 4 byte pattern. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface for A\+PI specific buffer class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_f_w_1_1_i_buffer_aef075064f4de9081c18ff6e4a4847e52}\label{class_g_f_w_1_1_i_buffer_aef075064f4de9081c18ff6e4a4847e52}} 
+\index{G\+F\+W\+::\+I\+Buffer@{G\+F\+W\+::\+I\+Buffer}!````~I\+Buffer@{$\sim$\+I\+Buffer}}
+\index{````~I\+Buffer@{$\sim$\+I\+Buffer}!G\+F\+W\+::\+I\+Buffer@{G\+F\+W\+::\+I\+Buffer}}
+\subsubsection{\texorpdfstring{$\sim$\+I\+Buffer()}{~IBuffer()}}
+{\footnotesize\ttfamily virtual G\+F\+W\+::\+I\+Buffer\+::$\sim$\+I\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_f_w_1_1_i_buffer_aba2a08606a8670cf1dc98f93095fbd88}\label{class_g_f_w_1_1_i_buffer_aba2a08606a8670cf1dc98f93095fbd88}} 
+\index{G\+F\+W\+::\+I\+Buffer@{G\+F\+W\+::\+I\+Buffer}!Clear@{Clear}}
+\index{Clear@{Clear}!G\+F\+W\+::\+I\+Buffer@{G\+F\+W\+::\+I\+Buffer}}
+\subsubsection{\texorpdfstring{Clear()}{Clear()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void G\+F\+W\+::\+I\+Buffer\+::\+Clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Function to clear the entire buffer to 0. 
+
+\mbox{\Hypertarget{class_g_f_w_1_1_i_buffer_ac1605029b3f1e8cbfef8d30053ddac59}\label{class_g_f_w_1_1_i_buffer_ac1605029b3f1e8cbfef8d30053ddac59}} 
+\index{G\+F\+W\+::\+I\+Buffer@{G\+F\+W\+::\+I\+Buffer}!Clear@{Clear}}
+\index{Clear@{Clear}!G\+F\+W\+::\+I\+Buffer@{G\+F\+W\+::\+I\+Buffer}}
+\subsubsection{\texorpdfstring{Clear()}{Clear()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void G\+F\+W\+::\+I\+Buffer\+::\+Clear (\begin{DoxyParamCaption}\item[{const void $\ast$}]{pattern }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Function to clear the entire buffer to the specified 4 byte pattern. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pattern} & 4 byte pattern to fill the buffer with. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_i_buffer_aeda77fc8f158dd79bc28520f92827f92}\label{class_g_f_w_1_1_i_buffer_aeda77fc8f158dd79bc28520f92827f92}} 
+\index{G\+F\+W\+::\+I\+Buffer@{G\+F\+W\+::\+I\+Buffer}!Create@{Create}}
+\index{Create@{Create}!G\+F\+W\+::\+I\+Buffer@{G\+F\+W\+::\+I\+Buffer}}
+\subsubsection{\texorpdfstring{Create()}{Create()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual void G\+F\+W\+::\+I\+Buffer\+::\+Create (\begin{DoxyParamCaption}\item[{unsigned}]{size,  }\item[{int}]{usage\+Bits }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Function to create a buffer without data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & The size of the buffer to allocate. \\
+\hline
+{\em usage\+Bits} & Bits that describe how the buffer is intended to be used. Buffer\+Usage\+Bits \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_i_buffer_a049c56d462a1a85b4ecb88b417ef5e4e}\label{class_g_f_w_1_1_i_buffer_a049c56d462a1a85b4ecb88b417ef5e4e}} 
+\index{G\+F\+W\+::\+I\+Buffer@{G\+F\+W\+::\+I\+Buffer}!Create@{Create}}
+\index{Create@{Create}!G\+F\+W\+::\+I\+Buffer@{G\+F\+W\+::\+I\+Buffer}}
+\subsubsection{\texorpdfstring{Create()}{Create()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual void G\+F\+W\+::\+I\+Buffer\+::\+Create (\begin{DoxyParamCaption}\item[{unsigned}]{size,  }\item[{const void $\ast$}]{data,  }\item[{int}]{usage\+Bits }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Function to create a buffer and set the initial data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & The size of the buffer to allocate. \\
+\hline
+{\em data} & The data to copy into the buffer. \\
+\hline
+{\em usage\+Bits} & Bits that describe how the buffer is intended to be used. Buffer\+Usage\+Bits \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_i_buffer_a97c3fbf03423db1abc78a8aa343fed4f}\label{class_g_f_w_1_1_i_buffer_a97c3fbf03423db1abc78a8aa343fed4f}} 
+\index{G\+F\+W\+::\+I\+Buffer@{G\+F\+W\+::\+I\+Buffer}!Read@{Read}}
+\index{Read@{Read}!G\+F\+W\+::\+I\+Buffer@{G\+F\+W\+::\+I\+Buffer}}
+\subsubsection{\texorpdfstring{Read()}{Read()}}
+{\footnotesize\ttfamily virtual void G\+F\+W\+::\+I\+Buffer\+::\+Read (\begin{DoxyParamCaption}\item[{unsigned}]{offset,  }\item[{unsigned}]{size,  }\item[{void $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Function to read data from the buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em offset} & The offset to where to start reading from in the buffer. \\
+\hline
+{\em size} & The amount of bytes to read from the buffer. \\
+\hline
+{\em data} & Pointer to an output buffer. Must already be allocated and must be atleast  bytes in size. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_f_w_1_1_i_buffer_a3028dee9374054e3e448f8d609df654b}\label{class_g_f_w_1_1_i_buffer_a3028dee9374054e3e448f8d609df654b}} 
+\index{G\+F\+W\+::\+I\+Buffer@{G\+F\+W\+::\+I\+Buffer}!Write@{Write}}
+\index{Write@{Write}!G\+F\+W\+::\+I\+Buffer@{G\+F\+W\+::\+I\+Buffer}}
+\subsubsection{\texorpdfstring{Write()}{Write()}}
+{\footnotesize\ttfamily virtual void G\+F\+W\+::\+I\+Buffer\+::\+Write (\begin{DoxyParamCaption}\item[{unsigned}]{offset,  }\item[{unsigned}]{size,  }\item[{const void $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Function to write or update the data in the buffer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em offset} & The offset to where to start writing in the buffer. \\
+\hline
+{\em size} & The amount of bytes that needs to be written to the buffer. \\
+\hline
+{\em data} & The data that needs to be written to the buffer. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Programming/\+Graphics\+Framework/\+Graphics\+Framework/\+Include/\+Interfaces/\hyperlink{_i_buffer_8h}{I\+Buffer.\+h}\end{DoxyCompactItemize}
