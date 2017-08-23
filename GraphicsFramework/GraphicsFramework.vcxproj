@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Include\Interfaces\IBuffer.h" />
     <ClInclude Include="Include\ContextState.h" />
     <ClInclude Include="Include\Interfaces\IContextStateFunctions.h" />
     <ClInclude Include="Include\Logging.h" />
