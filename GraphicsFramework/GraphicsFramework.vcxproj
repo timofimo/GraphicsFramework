@@ -22,8 +22,13 @@
     <ClInclude Include="Include\Interfaces\IBuffer.h" />
     <ClInclude Include="Include\ContextState.h" />
     <ClInclude Include="Include\Interfaces\IContextStateFunctions.h" />
+    <ClInclude Include="Include\Interfaces\ISampler.h" />
+    <ClInclude Include="Include\Interfaces\IShader.h" />
+    <ClInclude Include="Include\Interfaces\ITexture.h" />
     <ClInclude Include="Include\Logging.h" />
     <ClInclude Include="Include\Math.h" />
+    <ClInclude Include="Include\Structures\ShaderAttribute.h" />
+    <ClInclude Include="Include\Structures\ShaderParameter.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\ContextState.cpp" />
