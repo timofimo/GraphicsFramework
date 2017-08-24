@@ -82,6 +82,14 @@ namespace GFW
 		GL_FLOAT
 	};
 
+	enum class TextureMultisampleCount
+	{
+		NO_MULTISAMPLING/*1 sample per pixel.*/,
+		MULTISAMPLE_2X/*Maximum of 2 samples per pixel.*/,
+		MULTISAMPLE_4X/*Maximum of 4 samples per pixel.*/,
+		MULTISAMPLE_8X/*Maximum of 8 samples per pixel.*/
+	};
+
 	/**
 	 * \brief Interface for API specific texture class.
 	 */
@@ -100,6 +108,15 @@ namespace GFW
 		 * \param pixelData The pixel data to initialize the texture to. nullptr to only create the storage.
 		 */
 		virtual void Create(int width, int height, bool generateMipmaps, TextureFormat format, TextureDataType type, unsigned char* pixelData) = 0;
+
+		/**
+		 * \brief Interface to initialize the texture as a multisampled 2D texture.
+		 * \param width The width of the texture.
+		 * \param height The height of the texture.
+		 * \param sampleCount The sample count of the texture.
+		 * \param format The format of the texture.
+		 */
+		virtual void Create(int width, int height, TextureMultisampleCount sampleCount, TextureFormat format) = 0;
 
 		/**
 		 * \brief Interface to initialize the texture as a 3D texture.
